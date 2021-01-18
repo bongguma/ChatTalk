@@ -16,6 +16,7 @@
 		0F5DA0EC25B5C71000024E7B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DA0EB25B5C71000024E7B /* GoogleService-Info.plist */; };
 		0F5DA10D25B5CC4F00024E7B /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DA10C25B5CC4F00024E7B /* chat.png */; };
 		0F5DA12025B5CE3E00024E7B /* UILayoutPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA11F25B5CE3E00024E7B /* UILayoutPriority.swift */; };
+		0F5DA16725B5D47600024E7B /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DA16625B5D47600024E7B /* RemoteConfigDefaults.plist */; };
 		295FA6B21AA1277121A139FA /* Pods_ChatTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E53FAB978680D8F372D63BA /* Pods_ChatTalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		0F5DA0EB25B5C71000024E7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F5DA10C25B5CC4F00024E7B /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
 		0F5DA11F25B5CE3E00024E7B /* UILayoutPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILayoutPriority.swift; sourceTree = "<group>"; };
+		0F5DA16625B5D47600024E7B /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		5E53FAB978680D8F372D63BA /* Pods_ChatTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABA34DB269D2FE6FF744A4B /* Pods-ChatTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatTalk.debug.xcconfig"; path = "Target Support Files/Pods-ChatTalk/Pods-ChatTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		E9B2FFDCA930B84544180CEF /* Pods-ChatTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatTalk.release.xcconfig"; path = "Target Support Files/Pods-ChatTalk/Pods-ChatTalk.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				0F5DA0DE25B5C1DF00024E7B /* LaunchScreen.storyboard */,
 				0F5DA0EB25B5C71000024E7B /* GoogleService-Info.plist */,
 				0F5DA0E125B5C1DF00024E7B /* Info.plist */,
+				0F5DA16625B5D47600024E7B /* RemoteConfigDefaults.plist */,
 			);
 			path = ChatTalk;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F5DA16725B5D47600024E7B /* RemoteConfigDefaults.plist in Resources */,
 				0F5DA0E025B5C1DF00024E7B /* LaunchScreen.storyboard in Resources */,
 				0F5DA10D25B5CC4F00024E7B /* chat.png in Resources */,
 				0F5DA0EC25B5C71000024E7B /* GoogleService-Info.plist in Resources */,
