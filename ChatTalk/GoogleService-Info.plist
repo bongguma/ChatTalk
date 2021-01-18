@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>22136578858-pda4qv76aepscioimjtg0ds28pdj6sr9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.22136578858-pda4qv76aepscioimjtg0ds28pdj6sr9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCMXs6ufOVfoXAQy4Am_ukGnrFZSOlfi64</string>
+	<key>GCM_SENDER_ID</key>
+	<string>22136578858</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.bongguma.ChatTalk</string>
+	<key>PROJECT_ID</key>
+	<string>chattalk-a81e5</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chattalk-a81e5.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:22136578858:ios:5c469afdc8463c20613453</string>
+</dict>
+</plist>
