@@ -53,6 +53,9 @@ class ViewController: UIViewController {
                 exit(0)
             }))
             self.present(alert, animated: true, completion: nil)
+        } else {
+            let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            self.present(loginViewController, animated: true, completion: nil)
         }
     }
 

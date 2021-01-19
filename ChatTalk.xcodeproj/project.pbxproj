@@ -17,6 +17,7 @@
 		0F5DA10D25B5CC4F00024E7B /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DA10C25B5CC4F00024E7B /* chat.png */; };
 		0F5DA12025B5CE3E00024E7B /* UILayoutPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA11F25B5CE3E00024E7B /* UILayoutPriority.swift */; };
 		0F5DA16725B5D47600024E7B /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DA16625B5D47600024E7B /* RemoteConfigDefaults.plist */; };
+		0F5DA21525B718DA00024E7B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA21425B718DA00024E7B /* LoginViewController.swift */; };
 		295FA6B21AA1277121A139FA /* Pods_ChatTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E53FAB978680D8F372D63BA /* Pods_ChatTalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		0F5DA10C25B5CC4F00024E7B /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
 		0F5DA11F25B5CE3E00024E7B /* UILayoutPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILayoutPriority.swift; sourceTree = "<group>"; };
 		0F5DA16625B5D47600024E7B /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
+		0F5DA21425B718DA00024E7B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5E53FAB978680D8F372D63BA /* Pods_ChatTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABA34DB269D2FE6FF744A4B /* Pods-ChatTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatTalk.debug.xcconfig"; path = "Target Support Files/Pods-ChatTalk/Pods-ChatTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		E9B2FFDCA930B84544180CEF /* Pods-ChatTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatTalk.release.xcconfig"; path = "Target Support Files/Pods-ChatTalk/Pods-ChatTalk.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,13 +77,14 @@
 				0F5DA10B25B5CC3A00024E7B /* image */,
 				0F5DA0D325B5C1DC00024E7B /* AppDelegate.swift */,
 				0F5DA0D525B5C1DC00024E7B /* SceneDelegate.swift */,
-				0F5DA0D725B5C1DC00024E7B /* ViewController.swift */,
 				0F5DA0D925B5C1DC00024E7B /* Main.storyboard */,
 				0F5DA0DC25B5C1DF00024E7B /* Assets.xcassets */,
 				0F5DA0DE25B5C1DF00024E7B /* LaunchScreen.storyboard */,
 				0F5DA0EB25B5C71000024E7B /* GoogleService-Info.plist */,
 				0F5DA0E125B5C1DF00024E7B /* Info.plist */,
 				0F5DA16625B5D47600024E7B /* RemoteConfigDefaults.plist */,
+				0F5DA0D725B5C1DC00024E7B /* ViewController.swift */,
+				0F5DA21425B718DA00024E7B /* LoginViewController.swift */,
 			);
 			path = ChatTalk;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				0F5DA0D825B5C1DC00024E7B /* ViewController.swift in Sources */,
 				0F5DA0D425B5C1DC00024E7B /* AppDelegate.swift in Sources */,
 				0F5DA0D625B5C1DC00024E7B /* SceneDelegate.swift in Sources */,
+				0F5DA21525B718DA00024E7B /* LoginViewController.swift in Sources */,
 				0F5DA12025B5CE3E00024E7B /* UILayoutPriority.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
