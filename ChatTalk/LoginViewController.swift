@@ -11,6 +11,7 @@ import Firebase
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var joinBtn: UIButton!
     
     let remoteConfig = RemoteConfig.remoteConfig()
     
@@ -18,4 +19,10 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    
+    @IBAction func joinAction(_ sender: Any) {
+        let joinViewController = self.storyboard?.instantiateViewController(withIdentifier: "joinViewController") as! JoinViewController
+        self.present(joinViewController, animated: true, completion: nil)
+    }
+    
 }
