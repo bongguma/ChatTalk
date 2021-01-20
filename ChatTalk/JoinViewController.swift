@@ -10,6 +10,6 @@ import UIKit
 class JoinViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "회원가입"
     }
 }
