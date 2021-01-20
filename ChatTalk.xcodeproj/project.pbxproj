@@ -19,7 +19,7 @@
 		0F5DA16725B5D47600024E7B /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DA16625B5D47600024E7B /* RemoteConfigDefaults.plist */; };
 		0F5DA21525B718DA00024E7B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA21425B718DA00024E7B /* LoginViewController.swift */; };
 		0F5DA21925B725CB00024E7B /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA21825B725CB00024E7B /* UIButton.swift */; };
-		0F5DA21C25B870C900024E7B /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA21B25B870C900024E7B /* JoinViewController.swift */; };
+		0F5DA24A25B87B7600024E7B /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA24925B87B7600024E7B /* JoinViewController.swift */; };
 		295FA6B21AA1277121A139FA /* Pods_ChatTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E53FAB978680D8F372D63BA /* Pods_ChatTalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +38,7 @@
 		0F5DA16625B5D47600024E7B /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		0F5DA21425B718DA00024E7B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0F5DA21825B725CB00024E7B /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
-		0F5DA21B25B870C900024E7B /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		0F5DA24925B87B7600024E7B /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		5E53FAB978680D8F372D63BA /* Pods_ChatTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABA34DB269D2FE6FF744A4B /* Pods-ChatTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatTalk.debug.xcconfig"; path = "Target Support Files/Pods-ChatTalk/Pods-ChatTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		E9B2FFDCA930B84544180CEF /* Pods-ChatTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatTalk.release.xcconfig"; path = "Target Support Files/Pods-ChatTalk/Pods-ChatTalk.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 				0F5DA16625B5D47600024E7B /* RemoteConfigDefaults.plist */,
 				0F5DA0D725B5C1DC00024E7B /* ViewController.swift */,
 				0F5DA21425B718DA00024E7B /* LoginViewController.swift */,
-				0F5DA21B25B870C900024E7B /* JoinViewController.swift */,
+				0F5DA24925B87B7600024E7B /* JoinViewController.swift */,
 			);
 			path = ChatTalk;
 			sourceTree = "<group>";
@@ -249,9 +249,9 @@
 				0F5DA0D425B5C1DC00024E7B /* AppDelegate.swift in Sources */,
 				0F5DA0D625B5C1DC00024E7B /* SceneDelegate.swift in Sources */,
 				0F5DA21525B718DA00024E7B /* LoginViewController.swift in Sources */,
-				0F5DA21C25B870C900024E7B /* JoinViewController.swift in Sources */,
 				0F5DA12025B5CE3E00024E7B /* UILayoutPriority.swift in Sources */,
 				0F5DA21925B725CB00024E7B /* UIButton.swift in Sources */,
+				0F5DA24A25B87B7600024E7B /* JoinViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

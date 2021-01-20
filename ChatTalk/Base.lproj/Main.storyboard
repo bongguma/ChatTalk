@@ -54,7 +54,7 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="chatTalk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsI-7j-gdY">
-                                                <rect key="frame" x="117" y="48" width="86" height="24"/>
+                                                <rect key="frame" x="116" y="48" width="87" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <nil key="textColor"/>
@@ -136,7 +136,7 @@
         <!--Join View Controller-->
         <scene sceneID="T4Q-eb-KR1">
             <objects>
-                <viewController storyboardIdentifier="JoinViewController" id="dha-8p-bDb" customClass="JoinViewController" customModule="ChatTalk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JoinViewController" modalPresentationStyle="fullScreen" id="dha-8p-bDb" customClass="JoinViewController" customModule="ChatTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ise-EB-XG9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="720"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,7 +146,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일을 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S3b-PK-SeP">
-                                        <rect key="frame" x="16" y="21" width="287" height="34"/>
+                                        <rect key="frame" x="16" y="21" width="286" height="34"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -184,11 +184,29 @@
                         <viewLayoutGuide key="safeArea" id="1cW-bg-hdp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wpP-Ub-YSQ"/>
                     <size key="freeformSize" width="320" height="720"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qw-CY-hQs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1486.9565217391305" y="97.767857142857139"/>
+            <point key="canvasLocation" x="2072" y="100"/>
+        </scene>
+        <!--JoinViewNavigationCont-->
+        <scene sceneID="fAg-zi-b46">
+            <objects>
+                <navigationController title="JoinViewNavigationCont" id="qUn-vK-ILs" sceneMemberID="viewController">
+                    <size key="freeformSize" width="320" height="720"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zzl-Lf-irz">
+                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dha-8p-bDb" kind="relationship" relationship="rootViewController" id="1fY-5z-9wV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mbd-yl-A5i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1383" y="100"/>
         </scene>
     </scenes>
     <resources>

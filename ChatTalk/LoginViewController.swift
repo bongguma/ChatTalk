@@ -21,8 +21,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func joinAction(_ sender: Any) {
-        let joinViewController = self.storyboard?.instantiateViewController(withIdentifier: "joinViewController") as! JoinViewController
-        self.present(joinViewController, animated: true, completion: nil)
+//        let joinViewController = self.storyboard?.instantiateViewController(withIdentifier: "JoinViewController") as! JoinViewController
+//        self.present(joinViewController, animated: true, completion: nil)
+        
+        let joinViewNavigationCont = self.storyboard?.instantiateViewController(withIdentifier: "JoinViewNavigationCont")
+        self.present(joinViewNavigationCont!, animated: true, completion: nil)
+        
     }
     
 }
