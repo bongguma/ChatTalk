@@ -10,7 +10,8 @@ target 'ChatTalk' do
 #    pod 'SnapKit'
     
     # add the Firebase pod for Google Analytics
-    pod 'Firebase/Analytics'
+#    pod 'Firebase/Analytics'
     pod 'Firebase/RemoteConfig'
-
+#    pod 'Firebase/Database'
+    pod 'Firebase/Auth'
 end
