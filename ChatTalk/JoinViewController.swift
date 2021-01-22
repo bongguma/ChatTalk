@@ -6,8 +6,8 @@
 //
 
 import UIKit
-//import Firebase
-//import FirebaseDatabase
+import Firebase
+import FirebaseDatabase
 
 class JoinViewController: UIViewController {
     @IBOutlet weak var emailTxtF: UITextField!
@@ -21,11 +21,11 @@ class JoinViewController: UIViewController {
     }
     
     @IBAction func joinAction(_ sender: Any) {
-//        Auth.auth().createUser(withEmail: emailTxtF.text!, password: passwordTxtF.text!) { (user, error) in
-////            let uid = user.
-//            
-//            Database.database().reference().child("users")
-//        }
+        Auth.auth().createUser(withEmail: emailTxtF.text!, password: passwordTxtF.text!) { (user, error) in
+            let uid = user?.user.uid
+            
+            Database.database().reference().child("users").child(uid!).setValue(["name":self.nameTxtF.text!])
+        }
     }
     
 }
