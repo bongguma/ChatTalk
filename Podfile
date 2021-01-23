@@ -6,14 +6,6 @@ target 'ChatTalk' do
   use_frameworks!
 
   # Pods for ChatTalk
-#
-#    pod 'SnapKit'
-    
-    # add the Firebase pod for Google Analytics
-#    pod 'Firebase/Analytics'
-#    pod 'Firebase/RemoteConfig'
-#    pod 'Firebase/Database'
-#    pod 'Firebase/Auth'
 
 # Add the Firebase pod for Google Analytics
 pod 'Firebase/Analytics'
@@ -23,4 +15,5 @@ pod 'Firebase/Analytics'
 pod 'Firebase/RemoteConfig'
 pod 'Firebase/Database'
 pod 'Firebase/Auth'
+pod 'Firebase/Storage'
 end

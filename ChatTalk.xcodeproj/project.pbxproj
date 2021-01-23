@@ -20,6 +20,7 @@
 		0F5DA21525B718DA00024E7B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA21425B718DA00024E7B /* LoginViewController.swift */; };
 		0F5DA21925B725CB00024E7B /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA21825B725CB00024E7B /* UIButton.swift */; };
 		0F5DA24A25B87B7600024E7B /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA24925B87B7600024E7B /* JoinViewController.swift */; };
+		0F5DA34E25BC74F300024E7B /* gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DA34D25BC74F300024E7B /* gallery.png */; };
 		A965F232D2E92EFD19D944C7 /* Pods_ChatTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCFAF5DBC3B12E78138B9201 /* Pods_ChatTalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		0F5DA21425B718DA00024E7B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0F5DA21825B725CB00024E7B /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		0F5DA24925B87B7600024E7B /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		0F5DA34D25BC74F300024E7B /* gallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gallery.png; sourceTree = "<group>"; };
 		4804BE089A509481B8B1E2A6 /* Pods-ChatTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatTalk.debug.xcconfig"; path = "Target Support Files/Pods-ChatTalk/Pods-ChatTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		B4C3D8BAD10558B9AB1E3957 /* Pods-ChatTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatTalk.release.xcconfig"; path = "Target Support Files/Pods-ChatTalk/Pods-ChatTalk.release.xcconfig"; sourceTree = "<group>"; };
 		CCFAF5DBC3B12E78138B9201 /* Pods_ChatTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,7 @@
 		0F5DA10B25B5CC3A00024E7B /* image */ = {
 			isa = PBXGroup;
 			children = (
+				0F5DA34D25BC74F300024E7B /* gallery.png */,
 				0F5DA10C25B5CC4F00024E7B /* chat.png */,
 			);
 			path = image;
@@ -139,7 +142,7 @@
 				0F5DA0CC25B5C1DC00024E7B /* Sources */,
 				0F5DA0CD25B5C1DC00024E7B /* Frameworks */,
 				0F5DA0CE25B5C1DC00024E7B /* Resources */,
-				F8E3B83E97ED2DE1C7640239 /* [CP] Embed Pods Frameworks */,
+				A81D597DABF2C5CA34AE1792 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,6 +196,7 @@
 				0F5DA0EC25B5C71000024E7B /* GoogleService-Info.plist in Resources */,
 				0F5DA0DD25B5C1DF00024E7B /* Assets.xcassets in Resources */,
 				0F5DA0DB25B5C1DC00024E7B /* Main.storyboard in Resources */,
+				0F5DA34E25BC74F300024E7B /* gallery.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +225,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F8E3B83E97ED2DE1C7640239 /* [CP] Embed Pods Frameworks */ = {
+		A81D597DABF2C5CA34AE1792 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
