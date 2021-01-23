@@ -19,12 +19,19 @@ class JoinViewController: UIViewController {
         super.viewDidLoad()
         self.title = "회원가입"
     }
+    @IBAction func cancelAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func joinAction(_ sender: Any) {
         Auth.auth().createUser(withEmail: emailTxtF.text!, password: passwordTxtF.text!) { (user, error) in
-            let uid = user?.user.uid
             
-            Database.database().reference().child("users").child(uid!).setValue(["name":self.nameTxtF.text!])
+            if let uid = user?.user.uid {
+                print("uid?!!!!!!!!!")
+                Database.database().reference().child("users").child(uid).setValue(["name":self.nameTxtF.text!])
+            } else {
+                // 회원가입이 되지 않는 error 문구 생성 시키기
+            }
         }
     }
     
