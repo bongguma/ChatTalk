@@ -21,6 +21,7 @@
 		0F5DA21925B725CB00024E7B /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA21825B725CB00024E7B /* UIButton.swift */; };
 		0F5DA24A25B87B7600024E7B /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA24925B87B7600024E7B /* JoinViewController.swift */; };
 		0F5DA34E25BC74F300024E7B /* gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DA34D25BC74F300024E7B /* gallery.png */; };
+		0F5DA37A25BF104200024E7B /* JoinSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA37925BF104200024E7B /* JoinSuccessViewController.swift */; };
 		A965F232D2E92EFD19D944C7 /* Pods_ChatTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCFAF5DBC3B12E78138B9201 /* Pods_ChatTalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		0F5DA21825B725CB00024E7B /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		0F5DA24925B87B7600024E7B /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		0F5DA34D25BC74F300024E7B /* gallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gallery.png; sourceTree = "<group>"; };
+		0F5DA37925BF104200024E7B /* JoinSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinSuccessViewController.swift; sourceTree = "<group>"; };
 		4804BE089A509481B8B1E2A6 /* Pods-ChatTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatTalk.debug.xcconfig"; path = "Target Support Files/Pods-ChatTalk/Pods-ChatTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		B4C3D8BAD10558B9AB1E3957 /* Pods-ChatTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatTalk.release.xcconfig"; path = "Target Support Files/Pods-ChatTalk/Pods-ChatTalk.release.xcconfig"; sourceTree = "<group>"; };
 		CCFAF5DBC3B12E78138B9201 /* Pods_ChatTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 				0F5DA0D725B5C1DC00024E7B /* ViewController.swift */,
 				0F5DA21425B718DA00024E7B /* LoginViewController.swift */,
 				0F5DA24925B87B7600024E7B /* JoinViewController.swift */,
+				0F5DA37925BF104200024E7B /* JoinSuccessViewController.swift */,
 			);
 			path = ChatTalk;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				0F5DA0D825B5C1DC00024E7B /* ViewController.swift in Sources */,
 				0F5DA0D425B5C1DC00024E7B /* AppDelegate.swift in Sources */,
+				0F5DA37A25BF104200024E7B /* JoinSuccessViewController.swift in Sources */,
 				0F5DA0D625B5C1DC00024E7B /* SceneDelegate.swift in Sources */,
 				0F5DA21525B718DA00024E7B /* LoginViewController.swift in Sources */,
 				0F5DA12025B5CE3E00024E7B /* UILayoutPriority.swift in Sources */,
