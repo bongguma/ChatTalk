@@ -49,7 +49,8 @@ class JoinViewController: UIViewController, UINavigationControllerDelegate, UIIm
                 
                 Storage.storage().reference().child("userImages").child(uid).putData(imageData!, metadata: nil) { (data, error) in
                     Storage.storage().reference().child("userImages").child(uid).downloadURL { (image, error) in
-                        let imageUrl = image?.absoluteURL
+                        let imageUrl = image!.absoluteURL.path
+                        print("imageUrl :: \(imageUrl)")
                         Database.database().reference().child("users").child(uid).setValue(["name":self.nameTxtF.text!, "profileImage":imageUrl])
                     }
                     
