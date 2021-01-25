@@ -29,6 +29,12 @@ class LoginViewController: UIViewController {
                 alert.addAction(UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }
+            Auth.auth().addStateDidChangeListener { (auth, user) in
+                if nil != user {
+                    let mainViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+                    self.present(mainViewController, animated: true, completion: nil)
+                }
+            }
         }
     }
     @IBAction func joinAction(_ sender: Any) {
