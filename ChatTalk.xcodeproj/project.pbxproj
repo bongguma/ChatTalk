@@ -22,6 +22,9 @@
 		0F5DA24A25B87B7600024E7B /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA24925B87B7600024E7B /* JoinViewController.swift */; };
 		0F5DA34E25BC74F300024E7B /* gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DA34D25BC74F300024E7B /* gallery.png */; };
 		0F5DA37E25BF145D00024E7B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA37D25BF145D00024E7B /* MainViewController.swift */; };
+		0F5DA38225C1B86800024E7B /* chat_tapBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DA38025C1B86700024E7B /* chat_tapBar.png */; };
+		0F5DA38325C1B86800024E7B /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DA38125C1B86800024E7B /* account.png */; };
+		0F5DA38625C1B86E00024E7B /* people.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DA38525C1B86E00024E7B /* people.png */; };
 		A965F232D2E92EFD19D944C7 /* Pods_ChatTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCFAF5DBC3B12E78138B9201 /* Pods_ChatTalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,9 @@
 		0F5DA24925B87B7600024E7B /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		0F5DA34D25BC74F300024E7B /* gallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gallery.png; sourceTree = "<group>"; };
 		0F5DA37D25BF145D00024E7B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0F5DA38025C1B86700024E7B /* chat_tapBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_tapBar.png; sourceTree = "<group>"; };
+		0F5DA38125C1B86800024E7B /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account.png; sourceTree = "<group>"; };
+		0F5DA38525C1B86E00024E7B /* people.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = people.png; sourceTree = "<group>"; };
 		4804BE089A509481B8B1E2A6 /* Pods-ChatTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatTalk.debug.xcconfig"; path = "Target Support Files/Pods-ChatTalk/Pods-ChatTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		B4C3D8BAD10558B9AB1E3957 /* Pods-ChatTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatTalk.release.xcconfig"; path = "Target Support Files/Pods-ChatTalk/Pods-ChatTalk.release.xcconfig"; sourceTree = "<group>"; };
 		CCFAF5DBC3B12E78138B9201 /* Pods_ChatTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +108,9 @@
 		0F5DA10B25B5CC3A00024E7B /* image */ = {
 			isa = PBXGroup;
 			children = (
+				0F5DA38525C1B86E00024E7B /* people.png */,
+				0F5DA38125C1B86800024E7B /* account.png */,
+				0F5DA38025C1B86700024E7B /* chat_tapBar.png */,
 				0F5DA34D25BC74F300024E7B /* gallery.png */,
 				0F5DA10C25B5CC4F00024E7B /* chat.png */,
 			);
@@ -196,6 +205,9 @@
 				0F5DA16725B5D47600024E7B /* RemoteConfigDefaults.plist in Resources */,
 				0F5DA0E025B5C1DF00024E7B /* LaunchScreen.storyboard in Resources */,
 				0F5DA10D25B5CC4F00024E7B /* chat.png in Resources */,
+				0F5DA38225C1B86800024E7B /* chat_tapBar.png in Resources */,
+				0F5DA38625C1B86E00024E7B /* people.png in Resources */,
+				0F5DA38325C1B86800024E7B /* account.png in Resources */,
 				0F5DA0EC25B5C71000024E7B /* GoogleService-Info.plist in Resources */,
 				0F5DA0DD25B5C1DF00024E7B /* Assets.xcassets in Resources */,
 				0F5DA0DB25B5C1DC00024E7B /* Main.storyboard in Resources */,

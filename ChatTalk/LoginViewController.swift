@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
             }
             Auth.auth().addStateDidChangeListener { (auth, user) in
                 if nil != user {
-                    let mainViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+                    let mainViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainViewTabBarController") as! UITabBarController
                     self.present(mainViewController, animated: true, completion: nil)
                 }
             }
