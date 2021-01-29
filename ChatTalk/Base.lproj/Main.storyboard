@@ -356,11 +356,11 @@
         </designable>
     </designables>
     <resources>
-        <image name="account.png" width="384" height="384"/>
+        <image name="account.png" width="32" height="32"/>
         <image name="chat.png" width="409.60000610351562" height="409.60000610351562"/>
-        <image name="chat_tapBar.png" width="384" height="384"/>
+        <image name="chat_tapBar.png" width="24" height="24"/>
         <image name="gallery.png" width="344.52337646484375" height="344.52337646484375"/>
-        <image name="people.png" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="people.png" width="32" height="32"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

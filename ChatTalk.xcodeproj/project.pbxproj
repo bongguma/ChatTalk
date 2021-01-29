@@ -25,6 +25,7 @@
 		0F5DA38225C1B86800024E7B /* chat_tapBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DA38025C1B86700024E7B /* chat_tapBar.png */; };
 		0F5DA38325C1B86800024E7B /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DA38125C1B86800024E7B /* account.png */; };
 		0F5DA38625C1B86E00024E7B /* people.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DA38525C1B86E00024E7B /* people.png */; };
+		0F5DA38A25C4481B00024E7B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA38925C4481B00024E7B /* UserModel.swift */; };
 		A965F232D2E92EFD19D944C7 /* Pods_ChatTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCFAF5DBC3B12E78138B9201 /* Pods_ChatTalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		0F5DA38025C1B86700024E7B /* chat_tapBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat_tapBar.png; sourceTree = "<group>"; };
 		0F5DA38125C1B86800024E7B /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account.png; sourceTree = "<group>"; };
 		0F5DA38525C1B86E00024E7B /* people.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = people.png; sourceTree = "<group>"; };
+		0F5DA38925C4481B00024E7B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		4804BE089A509481B8B1E2A6 /* Pods-ChatTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatTalk.debug.xcconfig"; path = "Target Support Files/Pods-ChatTalk/Pods-ChatTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		B4C3D8BAD10558B9AB1E3957 /* Pods-ChatTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatTalk.release.xcconfig"; path = "Target Support Files/Pods-ChatTalk/Pods-ChatTalk.release.xcconfig"; sourceTree = "<group>"; };
 		CCFAF5DBC3B12E78138B9201 /* Pods_ChatTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +89,7 @@
 		0F5DA0D225B5C1DC00024E7B /* ChatTalk */ = {
 			isa = PBXGroup;
 			children = (
+				0F5DA38825C4480100024E7B /* Data */,
 				0F5DA11E25B5CE2F00024E7B /* extension */,
 				0F5DA10B25B5CC3A00024E7B /* image */,
 				0F5DA0D325B5C1DC00024E7B /* AppDelegate.swift */,
@@ -124,6 +127,14 @@
 				0F5DA21825B725CB00024E7B /* UIButton.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		0F5DA38825C4480100024E7B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0F5DA38925C4481B00024E7B /* UserModel.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		702478E05F300A2B78961227 /* Frameworks */ = {
@@ -271,6 +282,7 @@
 				0F5DA12025B5CE3E00024E7B /* UILayoutPriority.swift in Sources */,
 				0F5DA21925B725CB00024E7B /* UIButton.swift in Sources */,
 				0F5DA24A25B87B7600024E7B /* JoinViewController.swift in Sources */,
+				0F5DA38A25C4481B00024E7B /* UserModel.swift in Sources */,
 				0F5DA37E25BF145D00024E7B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
