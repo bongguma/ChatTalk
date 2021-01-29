@@ -308,7 +308,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Zve-ac-2Uq">
             <objects>
-                <tabBarController storyboardIdentifier="MainViewTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="3Ib-bN-n4w" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainViewTabBarController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="3Ib-bN-n4w" sceneMemberID="viewController">
                     <toolbarItems/>
                     <size key="freeformSize" width="320" height="720"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cVe-jG-zg6">
@@ -328,7 +328,7 @@
         <!--chat-->
         <scene sceneID="5Zo-jl-mwn">
             <objects>
-                <viewController id="eee-bS-NCy" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="eee-bS-NCy" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="id0-Vu-sxc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="720"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -345,7 +345,7 @@
         <!--account-->
         <scene sceneID="Kyu-Rk-lbM">
             <objects>
-                <viewController id="qQc-oV-0Oc" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="qQc-oV-0Oc" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yUY-0u-XJw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="720"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

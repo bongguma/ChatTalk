@@ -19,7 +19,13 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let peopleInfoCell = tableView.dequeueReusableCell(withIdentifier: "peopleInfoCell", for:indexPath)
+        let peopleInfoCell = tableView.dequeueReusableCell(withIdentifier: "peopleInfoTableViewCell", for:indexPath)
+        
+        URLSession.shared.dataTask(with: URL(string: peopleInfoArr[indexPath.row].profileImage!)!) { (data, response, error) in
+            
+            print("setData :: \(data)")
+            
+        }
         
         return peopleInfoCell
         
@@ -33,7 +39,7 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "peopleInfoCell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "peopleInfoTableViewCell")
         
         self.peopleInfoArr.removeAll()
         
