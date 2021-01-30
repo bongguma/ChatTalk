@@ -7,8 +7,9 @@
 
 import UIKit
 
+@objcMembers /* 이유를 모르겠으나 setValuesForKeys는 object-c 호환성이 필요 */
 class UserModel: NSObject {
     var profileImage : String?
     
-    var userName : String?
+    var name : String?
 }
