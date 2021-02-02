@@ -27,7 +27,6 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 userModel.setValuesForKeys(snapChild.value as! [String:Any])
                 
                 self.peopleInfoArr.append(userModel)
-                print("peopleInfoArrAppend :: \(self.peopleInfoArr.count)")
             }
             
             self.tableView.delegate = self
@@ -40,7 +39,6 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("peopleInfoArr :: \(peopleInfoArr.count)")
         return peopleInfoArr.count
     }
     
@@ -54,14 +52,14 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //
 //        }.resume()
         
-//        peopleInfoCell.setData(peopleInfoArr[indexPath.row])
+        peopleInfoCell.setData(peopleInfoArr[indexPath.row])
         
         return peopleInfoCell
         
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 60
     }
 }
  
