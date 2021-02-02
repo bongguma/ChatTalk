@@ -16,7 +16,7 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "PeopleInfoTableViewCell")
+        tableView.register(PeopleInfoTableViewCell.self, forCellReuseIdentifier: "PeopleInfoTableViewCell")
         
         self.peopleInfoArr.removeAll()
 
@@ -46,6 +46,7 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let peopleInfoCell = tableView.dequeueReusableCell(withIdentifier: "PeopleInfoTableViewCell", for: indexPath) as! PeopleInfoTableViewCell
+        
         print("indexPath :: \(indexPath)")
 //        URLSession.shared.dataTask(with: URL(string: peopleInfoArr[indexPath.row].profileImage!)!) { (data, response, error) in
 //
@@ -53,7 +54,7 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //
 //        }.resume()
         
-        peopleInfoCell.setData(peopleInfoArr[indexPath.row])
+//        peopleInfoCell.setData(peopleInfoArr[indexPath.row])
         
         return peopleInfoCell
         

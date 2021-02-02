@@ -2,17 +2,16 @@
 //  PeopleInfoTableViewCell.swift
 //  ChatTalk
 //
-//  Created by 김예진 on 2021/01/30.
+//  Created by 김예진 on 2021/02/02.
 //
 
 import UIKit
 
 class PeopleInfoTableViewCell: UITableViewCell {
 
-    var userModel = UserModel()
-    
     override func awakeFromNib() {
         super.awakeFromNib()
+        print("들어올까요????????")
         // Initialization code
     }
 
@@ -20,10 +19,6 @@ class PeopleInfoTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-    
-    public func setData(_ userModel:UserModel){
-        self.userModel = userModel
     }
     
 }
