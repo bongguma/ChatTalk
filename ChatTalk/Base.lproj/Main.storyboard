@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chat.png" translatesAutoresizingMaskIntoConstraints="NO" id="2ny-eS-UDZ">
-                                <rect key="frame" x="108" y="278" width="105" height="80"/>
+                                <rect key="frame" x="108" y="279" width="105" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -46,7 +46,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="un8-rc-Ix1">
-                                <rect key="frame" x="0.0" y="180" width="320" height="359"/>
+                                <rect key="frame" x="0.0" y="181" width="320" height="359"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rPy-NZ-QeH">
@@ -151,7 +151,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ChatTalk 회원가입" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6AA-xl-cg0">
-                                        <rect key="frame" x="24" y="7" width="278" height="22"/>
+                                        <rect key="frame" x="24" y="8" width="278" height="22"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -171,19 +171,19 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름을 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YVw-AY-a0T">
-                                        <rect key="frame" x="24" y="240" width="274" height="40"/>
+                                        <rect key="frame" x="24" y="240" width="274" height="41"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호를 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F1B-vr-NzB">
-                                        <rect key="frame" x="24" y="306" width="274" height="37"/>
+                                        <rect key="frame" x="24" y="306" width="274" height="38"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwk-dq-6Aw">
-                                        <rect key="frame" x="24" y="373" width="128" height="35"/>
+                                        <rect key="frame" x="24" y="373" width="128" height="36"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="취소">
                                             <color key="titleColor" systemColor="labelColor"/>
@@ -201,7 +201,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A28-Xr-9kZ">
-                                        <rect key="frame" x="168" y="371" width="130" height="37"/>
+                                        <rect key="frame" x="168" y="372" width="130" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="회원가입">
                                             <color key="titleColor" systemColor="labelColor"/>
@@ -288,6 +288,38 @@
             </objects>
             <point key="canvasLocation" x="2069.5652173913045" y="739.95535714285711"/>
         </scene>
+        <!--ChatViewController-->
+        <scene sceneID="FhS-bL-KsL">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" title="ChatViewController" id="qGR-24-iw1" customClass="ChatViewController" customModule="ChatTalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Paw-AR-6H9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="720"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRl-XN-a4I">
+                                <rect key="frame" x="266" y="648" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" title="전송"/>
+                                <connections>
+                                    <action selector="sendAction:" destination="qGR-24-iw1" eventType="touchUpInside" id="rW3-NJ-9AD"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WoM-Mc-LtJ">
+                                <rect key="frame" x="16" y="646" width="231" height="34"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1h9-FN-PsB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <size key="freeformSize" width="320" height="720"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mZZ-xB-b09" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2066.666666666667" y="1325.8928571428571"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="fAg-zi-b46">
             <objects>
@@ -328,7 +360,7 @@
         <!--chat-->
         <scene sceneID="5Zo-jl-mwn">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="eee-bS-NCy" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="eee-bS-NCy" customClass="ChatViewController" customModule="ChatTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="id0-Vu-sxc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="720"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

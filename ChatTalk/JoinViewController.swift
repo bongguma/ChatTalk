@@ -48,10 +48,12 @@ class JoinViewController: UIViewController, UINavigationControllerDelegate, UIIm
                 
                 
                 Storage.storage().reference().child("userImages").child(uid).putData(imageData!, metadata: nil) { (data, error) in
-                    Storage.storage().reference().child("userImages").child(uid).downloadURL { (image, error) in
+                    Storage.storage().reference().child("userImages").child(uid).downloadURL  { (image, error) in
                         let imageUrl = image!.absoluteURL.path
+                        let values = ["name":self.nameTxtF.text!, "profileImage":imageUrl, "uid": Auth.auth().currentUser?.uid]
                         
-                        Database.database().reference().child("users").child(uid).setValue(["name":self.nameTxtF.text!, "profileImage":imageUrl])
+                        Database.database().reference().child("users").child(uid).setValue(values)
+                        self.dismiss(animated: true, completion: nil)
                     }
                     
                 }

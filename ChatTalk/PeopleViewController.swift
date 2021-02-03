@@ -37,7 +37,7 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
             self.tableView.reloadData()
         }
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return peopleInfoArr.count
     }
@@ -52,6 +52,7 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //
 //        }.resume()
         
+        
         peopleInfoCell.setData(peopleInfoArr[indexPath.row])
         
         return peopleInfoCell
@@ -60,6 +61,14 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nextControllerView = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as? ChatViewController
+        
+        nextControllerView?.destinationUid = self.peopleInfoArr[indexPath.row].uid
+        
+        self.navigationController?.pushViewController(nextControllerView!, animated: true)
     }
 }
  
