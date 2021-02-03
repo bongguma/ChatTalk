@@ -16,11 +16,15 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(PeopleInfoTableViewCell.self, forCellReuseIdentifier: "PeopleInfoTableViewCell")
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         
-        self.peopleInfoArr.removeAll()
+        tableView.register(PeopleInfoTableViewCell.self, forCellReuseIdentifier: "PeopleInfoTableViewCell")
 
         Database.database().reference().child("users").observe(DataEventType.value) { (snapshot) in
+            
+            self.peopleInfoArr.removeAll()
+            
             for child in snapshot.children {
                 let snapChild = child as! DataSnapshot
                 let userModel = UserModel()
@@ -29,8 +33,6 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 self.peopleInfoArr.append(userModel)
             }
             
-            self.tableView.delegate = self
-            self.tableView.dataSource = self
         }
 
         DispatchQueue.main.async {
