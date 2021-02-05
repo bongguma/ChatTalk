@@ -9,7 +9,13 @@ import UIKit
 
 class ChatModel: NSObject {
     
-    var uid : String?
+    // 채팅방에 참여한 사람들
+    public var users :Dictionary<String, Bool> = [:]
     
-    var destincationUid : String?
+    public var comments :Dictionary<String, Comment> = [:]
+    
+    public class Comment {
+        public var uid: String?
+        public var message: String?
+    }
 }
