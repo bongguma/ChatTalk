@@ -11,6 +11,7 @@ import Firebase
 class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var peopleInfoArr:[UserModel] = []
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -48,14 +49,16 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let peopleInfoCell = tableView.dequeueReusableCell(withIdentifier: "PeopleInfoTableViewCell", for: indexPath) as! PeopleInfoTableViewCell
         
         print("indexPath :: \(indexPath)")
-//        URLSession.shared.dataTask(with: URL(string: peopleInfoArr[indexPath.row].profileImage!)!) { (data, response, error) in
-//
-//            print("setData :: \(data)")
-//
-//        }.resume()
+        URLSession.shared.dataTask(with: URL(string: peopleInfoArr[indexPath.row].profileImage!)!) { (data, response, error) in
+            DispatchQueue.main.async {
+                
+                peopleInfoCell.setData(self.peopleInfoArr[indexPath.row])
+                print("setData :: \(data)")
+            }
+
+        }.resume()
         
         
-        peopleInfoCell.setData(peopleInfoArr[indexPath.row])
         
         return peopleInfoCell
         
