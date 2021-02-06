@@ -28,8 +28,10 @@ class PeopleInfoTableViewCell: UITableViewCell {
     
     public func setUiUpdate(userModel: UserModel, _ data:Data){
         
-        peopleProfileIv.image = UIImage(data: data)
-        peopleProfileIv.layer.cornerRadius = (imageView?.frame.size.width)!/2
+        if nil != data {
+            peopleProfileIv.image = UIImage(data: data)
+            peopleProfileIv.layer.cornerRadius = (imageView?.frame.size.width)!/2
+        }
         
         peopleNameLbl.text = userModel.name
     }

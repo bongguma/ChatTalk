@@ -48,12 +48,31 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // 첫 번째 인자로 등록한 identifier, cell은 as 키워드로 앞서 만든 custom cell class화 해준다.
         let peopleInfoCell = tableView.dequeueReusableCell(withIdentifier: "PeopleInfoTableViewCell", for: indexPath) as! PeopleInfoTableViewCell
         
-        URLSession.shared.dataTask(with: URL(string: peopleInfoArr[indexPath.row].profileImage!)!) { (data, response, error) in
+//        var profileImageUrl = peopleInfoArr[indexPath.row].profileImage!
+//        print("profileImageUrl ::\(profileImageUrl)")
+////        profileImageUrl.replacingOccurrences(of: <#T##StringProtocol#>, with: <#T##StringProtocol#>)
+//        let gsReference = Storage.storage().reference(forURL:  peopleInfoArr[indexPath.row].profileImage!)
+//                    print(gsReference.fullPath)//imageFolder/abc.jpg
+//                    print(gsReference.bucket)//yourapp-206323.appspot.com
+//                    print(gsReference.name)//abc.jpg
+//                    gsReference.downloadURL(completion: { (url, error) in
+//                        if let _url = url{
+//                            print("_url::\(_url)")
+//                            //use this _url in your any lazy loading third party library  and load image in your UITableViewCell
+//                            //in my case is user Kingfisher third party lasy loading
+//
+//                        }
+//        })
+        
+        URLSession.shared.dataTask(with: URL(string: "https://\(peopleInfoArr[indexPath.row].profileImage!)")!) { (data, response, error) in
             print("data :: \(data)")
-            print("response :: \(response)")
             print("error :: \(error)")
             DispatchQueue.main.async {
-//                peopleInfoCell.setUiUpdate(userModel: self.peopleInfoArr[indexPath.row], data!)
+                if nil != data {
+                    peopleInfoCell.setUiUpdate(userModel: self.peopleInfoArr[indexPath.row], data!)
+                } else {
+                    peopleInfoCell.setUiUpdate(userModel: self.peopleInfoArr[indexPath.row], Data())
+                }
             }
             
         }.resume()

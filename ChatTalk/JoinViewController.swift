@@ -46,7 +46,6 @@ class JoinViewController: UIViewController, UINavigationControllerDelegate, UIIm
             if let uid = user?.user.uid {
                 let imageData = self.joinImageView.image!.jpegData(compressionQuality: 0.75)
                 
-                
                 Storage.storage().reference().child("userImages").child(uid).putData(imageData!, metadata: nil) { (data, error) in
                     Storage.storage().reference().child("userImages").child(uid).downloadURL  { (image, error) in
                         let imageUrl = image!.absoluteURL.path
