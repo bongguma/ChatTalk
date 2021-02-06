@@ -19,8 +19,6 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
-        tableView.register(PeopleInfoTableViewCell.self, forCellReuseIdentifier: "PeopleInfoTableViewCell")
 
         Database.database().reference().child("users").observe(DataEventType.value) { (snapshot) in
             
@@ -32,12 +30,12 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 userModel.setValuesForKeys(snapChild.value as! [String:Any])
                 
                 self.peopleInfoArr.append(userModel)
+                
+                print("appen :: \(self.peopleInfoArr.count)")
+                
+                    self.tableView.reloadData()
             }
             
-        }
-
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
         }
     }
 
@@ -46,18 +44,20 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // 첫 번째 인자로 등록한 identifier, cell은 as 키워드로 앞서 만든 custom cell class화 해준다.
         let peopleInfoCell = tableView.dequeueReusableCell(withIdentifier: "PeopleInfoTableViewCell", for: indexPath) as! PeopleInfoTableViewCell
         
-        print("indexPath :: \(indexPath)")
         URLSession.shared.dataTask(with: URL(string: peopleInfoArr[indexPath.row].profileImage!)!) { (data, response, error) in
+            print("data :: \(data)")
+            print("response :: \(response)")
+            print("error :: \(error)")
             DispatchQueue.main.async {
-                
-                peopleInfoCell.setData(self.peopleInfoArr[indexPath.row])
-                print("setData :: \(data)")
+//                peopleInfoCell.setUiUpdate(userModel: self.peopleInfoArr[indexPath.row], data!)
             }
-
+            
         }.resume()
-        
+
         
         
         return peopleInfoCell
@@ -65,7 +65,7 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 80
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -2,18 +2,18 @@
 //  PeopleInfoTableViewCell.swift
 //  ChatTalk
 //
-//  Created by 김예진 on 2021/02/02.
+//  Created by 김예진 on 2021/02/06.
 //
 
 import UIKit
 
 class PeopleInfoTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var profileImageView: UIImageView!
+    // 사용자 이미지
+    @IBOutlet weak var peopleProfileIv: UIImageView!
     
-    @IBOutlet weak var nameLbl: UILabel!
-    
-    var userModel = UserModel()
+    // 사용자 이름
+    @IBOutlet weak var peopleNameLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,9 +26,12 @@ class PeopleInfoTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    public func setData(_ userModel: UserModel){
-        self.userModel = userModel
-        print("들어올까요???????? \(userModel)")
+    public func setUiUpdate(userModel: UserModel, _ data:Data){
+        
+        peopleProfileIv.image = UIImage(data: data)
+        peopleProfileIv.layer.cornerRadius = (imageView?.frame.size.width)!/2
+        
+        peopleNameLbl.text = userModel.name
     }
-    
+
 }
