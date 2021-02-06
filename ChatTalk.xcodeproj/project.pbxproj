@@ -26,9 +26,9 @@
 		0F5DA38325C1B86800024E7B /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DA38125C1B86800024E7B /* account.png */; };
 		0F5DA38625C1B86E00024E7B /* people.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DA38525C1B86E00024E7B /* people.png */; };
 		0F5DA38A25C4481B00024E7B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA38925C4481B00024E7B /* UserModel.swift */; };
-		0F5DA39825C9782500024E7B /* PeopleInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA39625C9782500024E7B /* PeopleInfoTableViewCell.swift */; };
 		0F5DA3A125CAD29700024E7B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA39F25CAD29700024E7B /* ChatViewController.swift */; };
 		0F5DA3A725CAD51500024E7B /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA3A625CAD51500024E7B /* ChatModel.swift */; };
+		0FCBFB0225CED71600C456EB /* PeopleInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCBFB0125CED71600C456EB /* PeopleInfoTableViewCell.swift */; };
 		A965F232D2E92EFD19D944C7 /* Pods_ChatTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCFAF5DBC3B12E78138B9201 /* Pods_ChatTalk.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,9 +54,9 @@
 		0F5DA38125C1B86800024E7B /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account.png; sourceTree = "<group>"; };
 		0F5DA38525C1B86E00024E7B /* people.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = people.png; sourceTree = "<group>"; };
 		0F5DA38925C4481B00024E7B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		0F5DA39625C9782500024E7B /* PeopleInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInfoTableViewCell.swift; sourceTree = "<group>"; };
 		0F5DA39F25CAD29700024E7B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		0F5DA3A625CAD51500024E7B /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		0FCBFB0125CED71600C456EB /* PeopleInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInfoTableViewCell.swift; sourceTree = "<group>"; };
 		4804BE089A509481B8B1E2A6 /* Pods-ChatTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatTalk.debug.xcconfig"; path = "Target Support Files/Pods-ChatTalk/Pods-ChatTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		B4C3D8BAD10558B9AB1E3957 /* Pods-ChatTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatTalk.release.xcconfig"; path = "Target Support Files/Pods-ChatTalk/Pods-ChatTalk.release.xcconfig"; sourceTree = "<group>"; };
 		CCFAF5DBC3B12E78138B9201 /* Pods_ChatTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,7 +149,7 @@
 		0F5DA38D25C4677D00024E7B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				0F5DA39625C9782500024E7B /* PeopleInfoTableViewCell.swift */,
+				0FCBFB0125CED71600C456EB /* PeopleInfoTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -292,12 +292,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FCBFB0225CED71600C456EB /* PeopleInfoTableViewCell.swift in Sources */,
 				0F5DA0D825B5C1DC00024E7B /* ViewController.swift in Sources */,
 				0F5DA0D425B5C1DC00024E7B /* AppDelegate.swift in Sources */,
 				0F5DA3A125CAD29700024E7B /* ChatViewController.swift in Sources */,
 				0F5DA0D625B5C1DC00024E7B /* SceneDelegate.swift in Sources */,
 				0F5DA21525B718DA00024E7B /* LoginViewController.swift in Sources */,
-				0F5DA39825C9782500024E7B /* PeopleInfoTableViewCell.swift in Sources */,
 				0F5DA12025B5CE3E00024E7B /* UILayoutPriority.swift in Sources */,
 				0F5DA21925B725CB00024E7B /* UIButton.swift in Sources */,
 				0F5DA24A25B87B7600024E7B /* JoinViewController.swift in Sources */,
