@@ -18,13 +18,15 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
 
         self.title = "채팅방"
+        uid = Auth.auth().currentUser?.uid
         // Do any additional setup after loading the view.
     }
 
     @IBAction func sendAction(_ sender: Any) {
         // uid : 앱을 로그인한 유저에 대한 uid
         // destinationUid : 메신저를 받는 사람에 대한 uid
-        let createRoomInfo:Dictionary<String, Any> = ["users" : [uid: true, destinationUid:true], "destinationUid" : destinationUid ]
+        let createRoomInfo: Dictionary<String, Any> = ["users" : [uid! : true, destinationUid! : true]
+        ]
         
         Database.database().reference().child("chatrooms").childByAutoId().setValue(createRoomInfo)
     }
