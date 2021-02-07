@@ -261,10 +261,10 @@
             </objects>
             <point key="canvasLocation" x="2071.0144927536235" y="99.776785714285708"/>
         </scene>
-        <!--people-->
+        <!--PeopleViewController-->
         <scene sceneID="AsV-Aa-RBm">
             <objects>
-                <viewController storyboardIdentifier="PeopleViewController" modalPresentationStyle="fullScreen" id="qyI-pe-Tf0" customClass="PeopleViewController" customModule="ChatTalk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PeopleViewController" title="PeopleViewController" modalPresentationStyle="fullScreen" id="qyI-pe-Tf0" customClass="PeopleViewController" customModule="ChatTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nga-KK-SHq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="720"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -293,7 +293,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="1" green="0.89766567949999998" blue="0.7715834989" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="peopleNameLbl" destination="LPf-Ci-GRx" id="3pG-Qp-rjK"/>
@@ -306,7 +306,7 @@
                         <viewLayoutGuide key="safeArea" id="tXj-VN-Aun"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="people" image="people.png" landscapeImage="people.png" largeContentSizeImage="people.png" id="LyI-fb-i1r"/>
+                    <navigationItem key="navigationItem" id="oSw-yV-I1W"/>
                     <size key="freeformSize" width="320" height="720"/>
                     <connections>
                         <outlet property="tableView" destination="Okl-zM-0sX" id="ziK-CG-IwB"/>
@@ -314,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="svS-B5-80N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2069.5652173913045" y="739.95535714285711"/>
+            <point key="canvasLocation" x="2423" y="741"/>
         </scene>
         <!--ChatViewController-->
         <scene sceneID="FhS-bL-KsL">
@@ -377,7 +377,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="qyI-pe-Tf0" kind="relationship" relationship="viewControllers" id="2gS-Wm-ZI1"/>
+                        <segue destination="2Eo-o5-yNt" kind="relationship" relationship="viewControllers" id="2gS-Wm-ZI1"/>
                         <segue destination="eee-bS-NCy" kind="relationship" relationship="viewControllers" id="Vq8-6S-UkC"/>
                         <segue destination="qQc-oV-0Oc" kind="relationship" relationship="viewControllers" id="5tv-Xn-zDk"/>
                     </connections>
@@ -401,7 +401,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBY-0r-Atr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2762" y="741"/>
+            <point key="canvasLocation" x="3107" y="741"/>
         </scene>
         <!--account-->
         <scene sceneID="Kyu-Rk-lbM">
@@ -418,7 +418,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2oZ-Eh-Vpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3554" y="741"/>
+            <point key="canvasLocation" x="4324.6376811594209" y="740.625"/>
+        </scene>
+        <!--people-->
+        <scene sceneID="db2-KL-ayM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Eo-o5-yNt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="people" image="people.png" landscapeImage="people.png" largeContentSizeImage="people.png" id="LyI-fb-i1r"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bSd-Ea-maV">
+                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qyI-pe-Tf0" kind="relationship" relationship="rootViewController" id="App-fM-jXB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jgF-5u-Szg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1680" y="741"/>
         </scene>
     </scenes>
     <designables>

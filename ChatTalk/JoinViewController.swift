@@ -51,7 +51,11 @@ class JoinViewController: UIViewController, UINavigationControllerDelegate, UIIm
                         let imageUrl = image!.absoluteURL.path
                         let values = ["name":self.nameTxtF.text!, "profileImage":imageUrl, "uid": Auth.auth().currentUser?.uid]
                         
-                        Database.database().reference().child("users").child(uid).setValue(values)
+                        Database.database().reference().child("users").child(uid).setValue(values) { (error, ref) in
+                            if(nil==error){
+                                self.dismiss(animated: true, completion: nil)
+                            }
+                        }
                         self.dismiss(animated: true, completion: nil)
                     }
                     

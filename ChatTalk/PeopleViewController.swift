@@ -17,6 +17,7 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "친구목록"
         self.tableView.delegate = self
         self.tableView.dataSource = self
 
@@ -31,9 +32,7 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 
                 self.peopleInfoArr.append(userModel)
                 
-                print("appen :: \(self.peopleInfoArr.count)")
-                
-                    self.tableView.reloadData()
+                self.tableView.reloadData()
             }
             
         }
