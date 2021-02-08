@@ -350,6 +350,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <size key="freeformSize" width="320" height="600"/>
+                    <connections>
+                        <outlet property="messageTxtF" destination="WoM-Mc-LtJ" id="R7j-8O-Sgq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZZ-xB-b09" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
