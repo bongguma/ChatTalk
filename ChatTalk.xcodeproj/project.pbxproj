@@ -28,6 +28,7 @@
 		0F5DA38A25C4481B00024E7B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA38925C4481B00024E7B /* UserModel.swift */; };
 		0F5DA3A125CAD29700024E7B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA39F25CAD29700024E7B /* ChatViewController.swift */; };
 		0F5DA3A725CAD51500024E7B /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA3A625CAD51500024E7B /* ChatModel.swift */; };
+		0FBB9F3225D183CB00AEC739 /* ChatMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBB9F3125D183CB00AEC739 /* ChatMessageTableViewCell.swift */; };
 		0FCBFB0225CED71600C456EB /* PeopleInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCBFB0125CED71600C456EB /* PeopleInfoTableViewCell.swift */; };
 		A965F232D2E92EFD19D944C7 /* Pods_ChatTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCFAF5DBC3B12E78138B9201 /* Pods_ChatTalk.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		0F5DA38925C4481B00024E7B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		0F5DA39F25CAD29700024E7B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		0F5DA3A625CAD51500024E7B /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		0FBB9F3125D183CB00AEC739 /* ChatMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageTableViewCell.swift; sourceTree = "<group>"; };
 		0FCBFB0125CED71600C456EB /* PeopleInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInfoTableViewCell.swift; sourceTree = "<group>"; };
 		4804BE089A509481B8B1E2A6 /* Pods-ChatTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatTalk.debug.xcconfig"; path = "Target Support Files/Pods-ChatTalk/Pods-ChatTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		B4C3D8BAD10558B9AB1E3957 /* Pods-ChatTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatTalk.release.xcconfig"; path = "Target Support Files/Pods-ChatTalk/Pods-ChatTalk.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				0FCBFB0125CED71600C456EB /* PeopleInfoTableViewCell.swift */,
+				0FBB9F3125D183CB00AEC739 /* ChatMessageTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -182,7 +185,7 @@
 				0F5DA0CC25B5C1DC00024E7B /* Sources */,
 				0F5DA0CD25B5C1DC00024E7B /* Frameworks */,
 				0F5DA0CE25B5C1DC00024E7B /* Resources */,
-				A81D597DABF2C5CA34AE1792 /* [CP] Embed Pods Frameworks */,
+				9D289DB4F69094C06B0FB99D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -268,7 +271,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A81D597DABF2C5CA34AE1792 /* [CP] Embed Pods Frameworks */ = {
+		9D289DB4F69094C06B0FB99D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -301,6 +304,7 @@
 				0F5DA12025B5CE3E00024E7B /* UILayoutPriority.swift in Sources */,
 				0F5DA21925B725CB00024E7B /* UIButton.swift in Sources */,
 				0F5DA24A25B87B7600024E7B /* JoinViewController.swift in Sources */,
+				0FBB9F3225D183CB00AEC739 /* ChatMessageTableViewCell.swift in Sources */,
 				0F5DA38A25C4481B00024E7B /* UserModel.swift in Sources */,
 				0F5DA37E25BF145D00024E7B /* PeopleViewController.swift in Sources */,
 				0F5DA3A725CAD51500024E7B /* ChatModel.swift in Sources */,
