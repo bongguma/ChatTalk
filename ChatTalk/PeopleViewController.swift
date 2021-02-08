@@ -12,6 +12,8 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var peopleInfoArr:[UserModel] = []
     
+    var myUid : String?
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -22,6 +24,9 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.tableView.dataSource = self
 
         Database.database().reference().child("users").observe(DataEventType.value) { (snapshot) in
+
+            // 현재 로그인 된 유저 uid 저장
+            self.myUid = Auth.auth().currentUser?.uid
             
             self.peopleInfoArr.removeAll()
             
@@ -29,8 +34,9 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 let snapChild = child as! DataSnapshot
                 let userModel = UserModel()
                 userModel.setValuesForKeys(snapChild.value as! [String:Any])
-                
-                self.peopleInfoArr.append(userModel)
+                if !(self.myUid?.elementsEqual(userModel.uid!))!{
+                    self.peopleInfoArr.append(userModel)
+                }
                 
                 self.tableView.reloadData()
             }
