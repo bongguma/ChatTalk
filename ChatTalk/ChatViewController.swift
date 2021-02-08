@@ -25,6 +25,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
 
         self.title = "채팅방"
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         uid = Auth.auth().currentUser?.uid
         
         checkChatRoom()

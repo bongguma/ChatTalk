@@ -23,7 +23,7 @@ class ChatMessageTableViewCell: UITableViewCell {
     }
     
     public func setUiUpdate(_ comment : ChatModel.Comment){
-        if nil != comment.message {
+        if nil != comment {
             messageLbl.text = comment.message!
         }
         
