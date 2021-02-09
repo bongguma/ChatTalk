@@ -367,6 +367,13 @@
                                                     <outlet property="messageLbl" destination="UBW-Gn-Vzk" id="19e-B9-Dve"/>
                                                 </connections>
                                             </tableViewCell>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="GdQ-k4-UfC">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GdQ-k4-UfC" id="LgP-Di-KmG">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
                                         </prototypes>
                                         <connections>
                                             <outlet property="dataSource" destination="qGR-24-iw1" id="445-3J-pue"/>
