@@ -116,9 +116,12 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         } else {
             let destinationMessageCell = tableView.dequeueReusableCell(withIdentifier: "DestinationMessageCell", for: indexPath) as! DestinationMessageCell
             
-            
+            destinationMessageCell.setUiUpdate(self.comments[indexPath.row], userModel!)
             return destinationMessageCell
         }
         
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 30
     }
 }
