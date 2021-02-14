@@ -14,5 +14,27 @@ class DestinationMessageCell: UITableViewCell {
     @IBOutlet weak var nameLbl: UILabel!
     
     @IBOutlet weak var messageLbl: UILabel!
+   
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
     
+    public func setUiUpdate(_ comment : ChatModel.Comment, _ userModel: UserModel){
+        print("destinationMessageUIUpdate!!!!!!!!")
+        nameLbl.text = userModel.name
+        messageLbl.text = comment.message
+        let url = URL(string: userModel.profileImage!)
+//        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+//            DispatchQueue.main.sync {
+//                self.profileImageView.image = UIImage(data: data!)
+//            }
+//        }.resume()
+    }
 }

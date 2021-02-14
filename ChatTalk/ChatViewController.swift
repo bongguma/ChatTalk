@@ -107,21 +107,21 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        // 자기자신 채팅한 대화내용 보여주는 tableCell
+        // 로그인 되어있는 유저가 입력한 대화내용을 보여주는 tableCell
         if self.comments[indexPath.row].uid == uid{
             let chatMessageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageTableViewCell", for: indexPath) as! ChatMessageTableViewCell
             chatMessageTableViewCell.setUiUpdate(self.comments[indexPath.row])
             return chatMessageTableViewCell
-        } else {
+        }
+        // 로그인 되어있는 유저와 대화한 상대방의 대화내용을 보여주는 tableCell
+        else {
             let destinationMessageCell = tableView.dequeueReusableCell(withIdentifier: "DestinationMessageCell", for: indexPath) as! DestinationMessageCell
-            
             destinationMessageCell.setUiUpdate(self.comments[indexPath.row], userModel!)
             return destinationMessageCell
         }
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 30
+        return 40
     }
 }
