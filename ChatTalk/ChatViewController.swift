@@ -20,6 +20,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     var uid: String?
     var chatRoomUid: String?
     var comments : [ChatModel.Comment] = []
+    // 채팅하는 상대의 userModel를 가져와준다.
+    var userModel: UserModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,11 +73,19 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                     if (chatModel!.users[self.destinationUid!]) == true {
                         self.chatRoomUid = item.key
                         self.sendBtn.isEnabled = true
-                        self.getMessageList()
+                        self.getDestinationInfo()
                     }
                 }
             }
         }
+    }
+    
+    func getDestinationInfo(){
+        Database.database().reference().child("users").child(self.destinationUid!).observeSingleEvent(of: DataEventType.value, with: {(dataSnapshot) in
+            self.userModel = UserModel()
+            self.userModel?.setValuesForKeys(dataSnapshot.value as! [String:Any])
+            self.getMessageList()
+        })
     }
     
     // 전송한 메세지 리스트에 남기는 함수
@@ -97,10 +107,18 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let chatMessageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageTableViewCell", for: indexPath) as! ChatMessageTableViewCell
         
-        chatMessageTableViewCell.setUiUpdate(self.comments[indexPath.row])
+        // 자기자신 채팅한 대화내용 보여주는 tableCell
+        if self.comments[indexPath.row].uid == uid{
+            let chatMessageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageTableViewCell", for: indexPath) as! ChatMessageTableViewCell
+            chatMessageTableViewCell.setUiUpdate(self.comments[indexPath.row])
+            return chatMessageTableViewCell
+        } else {
+            let destinationMessageCell = tableView.dequeueReusableCell(withIdentifier: "DestinationMessageCell", for: indexPath) as! DestinationMessageCell
+            
+            
+            return destinationMessageCell
+        }
         
-        return chatMessageTableViewCell
     }
 }
