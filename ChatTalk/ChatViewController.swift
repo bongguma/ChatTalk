@@ -10,6 +10,8 @@ import Firebase
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var chatView: UIView!
+    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var messageTxtF: UITextField!
@@ -30,8 +32,17 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         uid = Auth.auth().currentUser?.uid
         
+        self.tabBarController?.tabBar.isHidden = true
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
         checkChatRoom()
         // Do any additional setup after loading the view.
+    }
+    
+    
+    // 채팅방 화면이 종료 될 때에
+    override func viewDidDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
 
     @IBAction func sendAction(_ sender: Any) {
@@ -60,6 +71,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             ]
             Database.database().reference().child("chatrooms").child(chatRoomUid!).child("comments").childByAutoId().setValue(value)
         }
+        
+        messageTxtF.resignFirstResponder()
     }
 
     // 파이어베이스 안에 이미 방이 생성되어 있었는지 아닌지 확인
@@ -101,6 +114,21 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         })
     }
     
+    @objc private func keyboardWillShow(_ notification: Notification) {
+      if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+        let keybaordRectangle = keyboardFrame.cgRectValue
+        let keyboardHeight = keybaordRectangle.height
+        chatView.frame.origin.y -= keyboardHeight
+      }
+    }
+      
+    @objc private func keyboardWillHide(_ notification: Notification) {
+      if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+        let keybaordRectangle = keyboardFrame.cgRectValue
+        let keyboardHeight = keybaordRectangle.height
+        chatView.frame.origin.y += keyboardHeight
+      }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return comments.count
