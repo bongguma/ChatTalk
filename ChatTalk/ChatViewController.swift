@@ -10,7 +10,7 @@ import Firebase
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var chatView: UIView!
+    @IBOutlet weak var chatView: UIScrollView!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -43,6 +43,11 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     // 채팅방 화면이 종료 될 때에
     override func viewDidDisappear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+//        chatView.contentSize = CGSize(width: chatView.frame.width, height: 500)
     }
 
     @IBAction func sendAction(_ sender: Any) {
