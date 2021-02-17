@@ -40,6 +40,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tabBarController?.tabBar.isHidden = true
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
+        
         checkChatRoom()
         // Do any additional setup after loading the view.
     }
