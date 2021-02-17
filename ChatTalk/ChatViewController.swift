@@ -10,7 +10,9 @@ import Firebase
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var chatView: UIScrollView!
+    @IBOutlet weak var chatView: UIView!
+    
+    @IBOutlet weak var chatScrollView: UIScrollView!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -29,6 +31,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
 
         self.title = "채팅방"
+        
+        chatScrollView.contentSize = CGSize(width: chatView.frame.width, height: 500)
+        
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         uid = Auth.auth().currentUser?.uid
         
@@ -47,7 +52,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewWillAppear(_ animated: Bool) {
         
-//        chatView.contentSize = CGSize(width: chatView.frame.width, height: 500)
     }
 
     @IBAction func sendAction(_ sender: Any) {
@@ -120,6 +124,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @objc private func keyboardWillShow(_ notification: Notification) {
+        
+        
       if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
         let keybaordRectangle = keyboardFrame.cgRectValue
         let keyboardHeight = keybaordRectangle.height
