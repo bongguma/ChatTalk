@@ -38,6 +38,11 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         uid = Auth.auth().currentUser?.uid
         
         self.tabBarController?.tabBar.isHidden = true
+        
+        // 빈 view 공간을 누르면 키보드가 내려가는 제스처 액션
+        let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dissmissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
         
@@ -48,11 +53,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // 채팅방 화면이 종료 될 때에
     override func viewDidDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self)
         self.tabBarController?.tabBar.isHidden = false
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
     }
 
     @IBAction func sendAction(_ sender: Any) {
@@ -79,7 +81,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 "uid" : uid!,
                 "message" : messageTxtF.text!
             ]
-            Database.database().reference().child("chatrooms").child(chatRoomUid!).child("comments").childByAutoId().setValue(value)
+            Database.database().reference().child("chatrooms").child(chatRoomUid!).child("comments").childByAutoId().setValue(value) { (error, ref) in
+                
+                self.messageTxtF.text = ""
+            }
         }
         
         messageTxtF.resignFirstResponder()
@@ -121,6 +126,10 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.comments.append(comment!)
             }
             self.tableView.reloadData()
+            
+            if self.comments.count > 0 {
+                self.tableView.scrollToRow(at: IndexPath(item: self.comments.count-1, section: 0), at: .bottom, animated: true)
+            }
         })
     }
     
@@ -130,7 +139,11 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
       if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
         let keybaordRectangle = keyboardFrame.cgRectValue
         let keyboardHeight = keybaordRectangle.height
+        print("chatView111111 :: \(chatView.frame.origin.y)")
+        print("keyboardHeight :: \(keyboardHeight)")
         chatView.frame.origin.y -= keyboardHeight
+        print("chatView2222222 :: \(chatView.frame.origin.y)")
+        self.tableView.reloadData()
       }
     }
       
@@ -139,7 +152,20 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         let keybaordRectangle = keyboardFrame.cgRectValue
         let keyboardHeight = keybaordRectangle.height
         chatView.frame.origin.y += keyboardHeight
+        
+        print("chatView111111 :: \(chatView.frame.origin.y)")
+        UIView.animate(withDuration: 0) {} completion: { (complete) in
+            if self.comments.count > 0 {
+                self.tableView.scrollToRow(at: IndexPath(item: self.comments.count-1, section: 0), at: .bottom, animated: true)
+            }
+        }
+
+        self.tableView.reloadData()
       }
+    }
+    
+    @objc func dissmissKeyboard(){
+        self.view.endEditing(true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
