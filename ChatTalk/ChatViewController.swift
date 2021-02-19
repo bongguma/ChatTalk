@@ -36,9 +36,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         uid = Auth.auth().currentUser?.uid
-        
-        self.tabBarController?.tabBar.isHidden = true
-        
+       
         // 빈 view 공간을 누르면 키보드가 내려가는 제스처 액션
         let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dissmissKeyboard))
         view.addGestureRecognizer(tap)
@@ -54,7 +52,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     // 채팅방 화면이 종료 될 때에
     override func viewDidDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self)
-        self.tabBarController?.tabBar.isHidden = false
     }
 
     @IBAction func sendAction(_ sender: Any) {
