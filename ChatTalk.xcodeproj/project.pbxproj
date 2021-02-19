@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F5B289125D93EA800B7AC47 /* DestinationMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B289025D93EA800B7AC47 /* DestinationMessageCell.swift */; };
+		0F5B289625DFFBC900B7AC47 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B289525DFFBC900B7AC47 /* ChatRoomViewController.swift */; };
 		0F5DA0D425B5C1DC00024E7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA0D325B5C1DC00024E7B /* AppDelegate.swift */; };
 		0F5DA0D625B5C1DC00024E7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA0D525B5C1DC00024E7B /* SceneDelegate.swift */; };
 		0F5DA0D825B5C1DC00024E7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA0D725B5C1DC00024E7B /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		0F5B289025D93EA800B7AC47 /* DestinationMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationMessageCell.swift; sourceTree = "<group>"; };
+		0F5B289525DFFBC900B7AC47 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		0F5DA0D025B5C1DC00024E7B /* ChatTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5DA0D325B5C1DC00024E7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F5DA0D525B5C1DC00024E7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F5B289325DFFBB200B7AC47 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0F5DA37D25BF145D00024E7B /* PeopleViewController.swift */,
+				0F5B289525DFFBC900B7AC47 /* ChatRoomViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		0F5DA0C725B5C1DC00024E7B = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +114,7 @@
 		0F5DA0D225B5C1DC00024E7B /* ChatTalk */ = {
 			isa = PBXGroup;
 			children = (
+				0F5B289325DFFBB200B7AC47 /* TabBar */,
 				0F5DA38D25C4677D00024E7B /* Cell */,
 				0F5DA38825C4480100024E7B /* Data */,
 				0F5DA11E25B5CE2F00024E7B /* extension */,
@@ -118,7 +130,6 @@
 				0F5DA0D725B5C1DC00024E7B /* ViewController.swift */,
 				0F5DA21425B718DA00024E7B /* LoginViewController.swift */,
 				0F5DA24925B87B7600024E7B /* JoinViewController.swift */,
-				0F5DA37D25BF145D00024E7B /* PeopleViewController.swift */,
 				0F5DA39F25CAD29700024E7B /* ChatViewController.swift */,
 			);
 			path = ChatTalk;
@@ -308,6 +319,7 @@
 			files = (
 				0FCBFB0225CED71600C456EB /* PeopleInfoTableViewCell.swift in Sources */,
 				0F5DA0D825B5C1DC00024E7B /* ViewController.swift in Sources */,
+				0F5B289625DFFBC900B7AC47 /* ChatRoomViewController.swift in Sources */,
 				0F5DA0D425B5C1DC00024E7B /* AppDelegate.swift in Sources */,
 				0F5DA3A125CAD29700024E7B /* ChatViewController.swift in Sources */,
 				0F5B289125D93EA800B7AC47 /* DestinationMessageCell.swift in Sources */,
