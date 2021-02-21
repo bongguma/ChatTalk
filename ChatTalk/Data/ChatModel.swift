@@ -27,6 +27,7 @@ class ChatModel: Mappable {
         
         public var uid: String?
         public var message: String?
+        public var time: Int?
         
         
         public required init?(map: Map) {}
@@ -34,6 +35,7 @@ class ChatModel: Mappable {
         public func mapping(map: Map) {
             uid <- map["uid"]
             message <- map["message"]
+            time <- map["time"]
         }
     }
 }

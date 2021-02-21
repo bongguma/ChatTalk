@@ -76,8 +76,9 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         else {
             let value = [
                 "uid" : uid!,
-                "message" : messageTxtF.text!
-            ]
+                "message" : messageTxtF.text!,
+                "time" : ServerValue.timestamp()
+            ] as [String : Any]
             Database.database().reference().child("chatrooms").child(chatRoomUid!).child("comments").childByAutoId().setValue(value) { (error, ref) in
                 
                 self.messageTxtF.text = ""

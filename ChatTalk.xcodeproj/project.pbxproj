@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0F5B289125D93EA800B7AC47 /* DestinationMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B289025D93EA800B7AC47 /* DestinationMessageCell.swift */; };
 		0F5B289625DFFBC900B7AC47 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B289525DFFBC900B7AC47 /* ChatRoomViewController.swift */; };
+		0F5B289F25E2950100B7AC47 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B289E25E2950100B7AC47 /* Int.swift */; };
+		0F5B28A425E2966E00B7AC47 /* UILayoutPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B28A225E2966E00B7AC47 /* UILayoutPriority.swift */; };
+		0F5B28A525E2966E00B7AC47 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B28A325E2966E00B7AC47 /* UIButton.swift */; };
 		0F5DA0D425B5C1DC00024E7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA0D325B5C1DC00024E7B /* AppDelegate.swift */; };
 		0F5DA0D625B5C1DC00024E7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA0D525B5C1DC00024E7B /* SceneDelegate.swift */; };
 		0F5DA0D825B5C1DC00024E7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA0D725B5C1DC00024E7B /* ViewController.swift */; };
@@ -40,6 +43,9 @@
 /* Begin PBXFileReference section */
 		0F5B289025D93EA800B7AC47 /* DestinationMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationMessageCell.swift; sourceTree = "<group>"; };
 		0F5B289525DFFBC900B7AC47 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		0F5B289E25E2950100B7AC47 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		0F5B28A225E2966E00B7AC47 /* UILayoutPriority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILayoutPriority.swift; sourceTree = "<group>"; };
+		0F5B28A325E2966E00B7AC47 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		0F5DA0D025B5C1DC00024E7B /* ChatTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5DA0D325B5C1DC00024E7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F5DA0D525B5C1DC00024E7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +99,16 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		0F5B289D25E294F500B7AC47 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				0F5B28A325E2966E00B7AC47 /* UIButton.swift */,
+				0F5B28A225E2966E00B7AC47 /* UILayoutPriority.swift */,
+				0F5B289E25E2950100B7AC47 /* Int.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
 		0F5DA0C725B5C1DC00024E7B = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +130,7 @@
 		0F5DA0D225B5C1DC00024E7B /* ChatTalk */ = {
 			isa = PBXGroup;
 			children = (
+				0F5B289D25E294F500B7AC47 /* extension */,
 				0F5B289325DFFBB200B7AC47 /* TabBar */,
 				0F5DA38D25C4677D00024E7B /* Cell */,
 				0F5DA38825C4480100024E7B /* Data */,
@@ -325,6 +342,7 @@
 				0F5B289125D93EA800B7AC47 /* DestinationMessageCell.swift in Sources */,
 				0F5DA0D625B5C1DC00024E7B /* SceneDelegate.swift in Sources */,
 				0F5DA21525B718DA00024E7B /* LoginViewController.swift in Sources */,
+				0F5B28A425E2966E00B7AC47 /* UILayoutPriority.swift in Sources */,
 				0F5DA12025B5CE3E00024E7B /* UILayoutPriority.swift in Sources */,
 				0F5DA21925B725CB00024E7B /* UIButton.swift in Sources */,
 				0F5DA24A25B87B7600024E7B /* JoinViewController.swift in Sources */,
@@ -332,6 +350,8 @@
 				0F5DA38A25C4481B00024E7B /* UserModel.swift in Sources */,
 				0F5DA37E25BF145D00024E7B /* PeopleViewController.swift in Sources */,
 				0F5DA3A725CAD51500024E7B /* ChatModel.swift in Sources */,
+				0F5B289F25E2950100B7AC47 /* Int.swift in Sources */,
+				0F5B28A525E2966E00B7AC47 /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
