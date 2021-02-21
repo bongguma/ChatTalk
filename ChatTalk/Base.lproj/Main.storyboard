@@ -510,7 +510,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="2Eo-o5-yNt" kind="relationship" relationship="viewControllers" id="2gS-Wm-ZI1"/>
-                        <segue destination="eee-bS-NCy" kind="relationship" relationship="viewControllers" id="Vq8-6S-UkC"/>
+                        <segue destination="8b0-uS-rMM" kind="relationship" relationship="viewControllers" id="Vq8-6S-UkC"/>
                         <segue destination="qQc-oV-0Oc" kind="relationship" relationship="viewControllers" id="5tv-Xn-zDk"/>
                     </connections>
                 </tabBarController>
@@ -518,7 +518,7 @@
             </objects>
             <point key="canvasLocation" x="2762.3188405797105" y="99.776785714285708"/>
         </scene>
-        <!--chat-->
+        <!--Chat Room View Controller-->
         <scene sceneID="5Zo-jl-mwn">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="eee-bS-NCy" customClass="ChatRoomViewController" customModule="ChatTalk" customModuleProvider="target" sceneMemberID="viewController">
@@ -531,7 +531,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatRowCell" rowHeight="70" id="2Tj-zM-V5s">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatRowCell" rowHeight="70" id="2Tj-zM-V5s" customClass="ChatRowCell" customModule="ChatTalk" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Tj-zM-V5s" id="O6j-2w-1ry">
@@ -549,8 +549,27 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUD-O1-COI">
+                                                    <rect key="frame" x="74" y="36" width="27" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" systemColor="systemGray3Color"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2011.11.11 11:11" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owa-gr-Au9">
+                                                    <rect key="frame" x="186" y="11" width="118" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" systemColor="systemGray3Color"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lastMessageLbl" destination="PUD-O1-COI" id="EpW-TN-VJB"/>
+                                            <outlet property="lastMessageTimeLbl" destination="owa-gr-Au9" id="7HM-Lb-zqq"/>
+                                            <outlet property="titleLbl" destination="fZL-S5-dx1" id="y5j-JG-BAJ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -562,7 +581,7 @@
                         <viewLayoutGuide key="safeArea" id="jiG-lW-9Tm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="chat" image="chat_tapBar.png" id="Ib8-Oa-WJl"/>
+                    <navigationItem key="navigationItem" id="Q0J-Nf-AW6"/>
                     <size key="freeformSize" width="320" height="720"/>
                     <connections>
                         <outlet property="tableView" destination="DlP-vh-RWT" id="9FJ-nM-xwX"/>
@@ -570,7 +589,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBY-0r-Atr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3105.7971014492755" y="740.625"/>
+            <point key="canvasLocation" x="3876.811594202899" y="740.625"/>
         </scene>
         <!--account-->
         <scene sceneID="Kyu-Rk-lbM">
@@ -587,7 +606,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2oZ-Eh-Vpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3948" y="741"/>
+            <point key="canvasLocation" x="4718.840579710145" y="740.625"/>
         </scene>
         <!--people-->
         <scene sceneID="db2-KL-ayM">
@@ -607,6 +626,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgF-5u-Szg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1680" y="741"/>
+        </scene>
+        <!--chat-->
+        <scene sceneID="fC7-vZ-Oej">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8b0-uS-rMM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="chat" image="chat_tapBar.png" id="Ib8-Oa-WJl"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jqo-TT-BEw">
+                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eee-bS-NCy" kind="relationship" relationship="rootViewController" id="haF-Cq-6gn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EKU-yR-SoH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3105.7971014492755" y="740.625"/>
         </scene>
     </scenes>
     <designables>
@@ -630,6 +668,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
