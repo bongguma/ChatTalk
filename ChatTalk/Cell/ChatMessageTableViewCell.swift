@@ -10,6 +10,7 @@ import UIKit
 class ChatMessageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var messageLbl: UILabel!
+    @IBOutlet weak var timeLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +26,7 @@ class ChatMessageTableViewCell: UITableViewCell {
     public func setUiUpdate(_ comment : ChatModel.Comment){
         if nil != comment {
             messageLbl.text = comment.message!
+            timeLbl.text = comment.time?.toDayTime
         }
         
     }

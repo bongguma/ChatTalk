@@ -15,6 +15,8 @@ class DestinationMessageCell: UITableViewCell {
     
     @IBOutlet weak var messageLbl: UILabel!
    
+    @IBOutlet weak var timeLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -30,6 +32,7 @@ class DestinationMessageCell: UITableViewCell {
         print("destinationMessageUIUpdate!!!!!!!!")
         nameLbl.text = userModel.name
         messageLbl.text = comment.message
+        timeLbl.text = comment.time?.toDayTime
         let url = URL(string: userModel.profileImage!)
 //        URLSession.shared.dataTask(with: url!) { (data, response, error) in
 //            DispatchQueue.main.sync {
