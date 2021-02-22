@@ -13,6 +13,8 @@
 		0F5B28A425E2966E00B7AC47 /* UILayoutPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B28A225E2966E00B7AC47 /* UILayoutPriority.swift */; };
 		0F5B28A525E2966E00B7AC47 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B28A325E2966E00B7AC47 /* UIButton.swift */; };
 		0F5B28A825E29DA200B7AC47 /* ChatRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B28A725E29DA200B7AC47 /* ChatRowCell.swift */; };
+		0F5B28D925E3FBF400B7AC47 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5B28D825E3FBF400B7AC47 /* PushKit.framework */; };
+		0F5B28DB25E3FC0C00B7AC47 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5B28DA25E3FC0C00B7AC47 /* UserNotifications.framework */; };
 		0F5DA0D425B5C1DC00024E7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA0D325B5C1DC00024E7B /* AppDelegate.swift */; };
 		0F5DA0D625B5C1DC00024E7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA0D525B5C1DC00024E7B /* SceneDelegate.swift */; };
 		0F5DA0D825B5C1DC00024E7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA0D725B5C1DC00024E7B /* ViewController.swift */; };
@@ -48,6 +50,8 @@
 		0F5B28A225E2966E00B7AC47 /* UILayoutPriority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILayoutPriority.swift; sourceTree = "<group>"; };
 		0F5B28A325E2966E00B7AC47 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		0F5B28A725E29DA200B7AC47 /* ChatRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRowCell.swift; sourceTree = "<group>"; };
+		0F5B28D825E3FBF400B7AC47 /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
+		0F5B28DA25E3FC0C00B7AC47 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		0F5DA0D025B5C1DC00024E7B /* ChatTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5DA0D325B5C1DC00024E7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F5DA0D525B5C1DC00024E7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F5B28DB25E3FC0C00B7AC47 /* UserNotifications.framework in Frameworks */,
+				0F5B28D925E3FBF400B7AC47 /* PushKit.framework in Frameworks */,
 				A965F232D2E92EFD19D944C7 /* Pods_ChatTalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,6 +206,8 @@
 		702478E05F300A2B78961227 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0F5B28DA25E3FC0C00B7AC47 /* UserNotifications.framework */,
+				0F5B28D825E3FBF400B7AC47 /* PushKit.framework */,
 				CCFAF5DBC3B12E78138B9201 /* Pods_ChatTalk.framework */,
 			);
 			name = Frameworks;
