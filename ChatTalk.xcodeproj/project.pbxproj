@@ -36,6 +36,7 @@
 		0F5DA38A25C4481B00024E7B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA38925C4481B00024E7B /* UserModel.swift */; };
 		0F5DA3A125CAD29700024E7B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA39F25CAD29700024E7B /* ChatViewController.swift */; };
 		0F5DA3A725CAD51500024E7B /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA3A625CAD51500024E7B /* ChatModel.swift */; };
+		0F745D3225E539E20054C7F2 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F745D3125E539E20054C7F2 /* AccountViewController.swift */; };
 		0FBB9F3225D183CB00AEC739 /* ChatMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBB9F3125D183CB00AEC739 /* ChatMessageTableViewCell.swift */; };
 		0FBB9F3625D2D63C00AEC739 /* messageGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FBB9F3425D2D63C00AEC739 /* messageGray.png */; };
 		0FBB9F3725D2D63C00AEC739 /* messageBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FBB9F3525D2D63C00AEC739 /* messageBlue.png */; };
@@ -75,6 +76,7 @@
 		0F5DA38925C4481B00024E7B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		0F5DA39F25CAD29700024E7B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		0F5DA3A625CAD51500024E7B /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		0F745D3125E539E20054C7F2 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		0FBB9F3125D183CB00AEC739 /* ChatMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageTableViewCell.swift; sourceTree = "<group>"; };
 		0FBB9F3425D2D63C00AEC739 /* messageGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageGray.png; sourceTree = "<group>"; };
 		0FBB9F3525D2D63C00AEC739 /* messageBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageBlue.png; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				0F5DA37D25BF145D00024E7B /* PeopleViewController.swift */,
 				0F5B289525DFFBC900B7AC47 /* ChatRoomViewController.swift */,
+				0F745D3125E539E20054C7F2 /* AccountViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				0F5DA0D425B5C1DC00024E7B /* AppDelegate.swift in Sources */,
 				0F5DA3A125CAD29700024E7B /* ChatViewController.swift in Sources */,
 				0F5B289125D93EA800B7AC47 /* DestinationMessageCell.swift in Sources */,
+				0F745D3225E539E20054C7F2 /* AccountViewController.swift in Sources */,
 				0F5DA0D625B5C1DC00024E7B /* SceneDelegate.swift in Sources */,
 				0F5DA21525B718DA00024E7B /* LoginViewController.swift in Sources */,
 				0F5B28A425E2966E00B7AC47 /* UILayoutPriority.swift in Sources */,

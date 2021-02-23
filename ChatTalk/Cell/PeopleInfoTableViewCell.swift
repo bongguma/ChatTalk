@@ -15,6 +15,8 @@ class PeopleInfoTableViewCell: UITableViewCell {
     // 사용자 이름
     @IBOutlet weak var peopleNameLbl: UILabel!
     
+    @IBOutlet weak var commentLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -34,6 +36,10 @@ class PeopleInfoTableViewCell: UITableViewCell {
         }
         
         peopleNameLbl.text = userModel.name
+        
+        if nil != userModel.comment {
+            commentLbl.text = userModel.comment!
+        }
     }
 
 }
