@@ -15,6 +15,8 @@ class AccountViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "개인정보 수정"
     }
     
     func showAlert(){

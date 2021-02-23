@@ -293,9 +293,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbe-r5-KdE">
-                                                    <rect key="frame" x="157" y="24" width="138" height="21"/>
+                                                    <rect key="frame" x="158" y="30" width="138" height="13"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -519,7 +519,7 @@
                     <connections>
                         <segue destination="2Eo-o5-yNt" kind="relationship" relationship="viewControllers" id="2gS-Wm-ZI1"/>
                         <segue destination="8b0-uS-rMM" kind="relationship" relationship="viewControllers" id="Vq8-6S-UkC"/>
-                        <segue destination="qQc-oV-0Oc" kind="relationship" relationship="viewControllers" id="5tv-Xn-zDk"/>
+                        <segue destination="nQq-V2-n2O" kind="relationship" relationship="viewControllers" id="5tv-Xn-zDk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKY-Ne-zbJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -599,7 +599,7 @@
             </objects>
             <point key="canvasLocation" x="3876.811594202899" y="740.625"/>
         </scene>
-        <!--account-->
+        <!--Account View Controller-->
         <scene sceneID="Kyu-Rk-lbM">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="qQc-oV-0Oc" customClass="AccountViewController" customModule="ChatTalk" customModuleProvider="target" sceneMemberID="viewController">
@@ -608,11 +608,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="557-bI-QYe">
-                                <rect key="frame" x="113" y="44" width="95" height="30"/>
+                                <rect key="frame" x="74" y="125" width="172" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="상태메세지 입력">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="labelColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="conditionCommentAction:" destination="qQc-oV-0Oc" eventType="touchUpInside" id="wnM-33-jCy"/>
                                 </connections>
@@ -621,7 +632,7 @@
                         <viewLayoutGuide key="safeArea" id="Jux-8X-pFy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="account" image="account.png" id="KxD-27-ixB"/>
+                    <navigationItem key="navigationItem" id="xsf-4Z-O58"/>
                     <size key="freeformSize" width="320" height="720"/>
                     <connections>
                         <outlet property="conditionsCommentBtn" destination="557-bI-QYe" id="9p4-E4-BFu"/>
@@ -629,7 +640,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2oZ-Eh-Vpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4718.840579710145" y="740.625"/>
+            <point key="canvasLocation" x="5489.8550724637689" y="740.625"/>
         </scene>
         <!--people-->
         <scene sceneID="db2-KL-ayM">
@@ -668,6 +679,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EKU-yR-SoH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3105.7971014492755" y="740.625"/>
+        </scene>
+        <!--account-->
+        <scene sceneID="v6l-io-IRN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nQq-V2-n2O" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="account" image="account.png" id="KxD-27-ixB"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Etf-sR-fhb">
+                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qQc-oV-0Oc" kind="relationship" relationship="rootViewController" id="3rX-hf-IYZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1dM-jI-G9B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4718.840579710145" y="740.625"/>
         </scene>
     </scenes>
     <designables>
