@@ -20,12 +20,17 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var sendBtn: UIButton!
     
-    var destinationUid: String? // 나중에 내가 채팅할 대상의 Uid
     var uid: String?
     var chatRoomUid: String?
+    
     var comments : [ChatModel.Comment] = []
+    var destinationUid: String? // 나중에 내가 채팅할 대상의 Uid
+    
     // 채팅하는 상대의 userModel를 가져와준다.
     var userModel: UserModel?
+    
+    var databaseRef : DatabaseReference?
+    var observe : UInt?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +57,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     // 채팅방 화면이 종료 될 때에
     override func viewDidDisappear(_ animated: Bool) {
         NotificationCenter.default.removeObserver(self)
+        
+        databaseRef?.removeObserver(withHandle: observe!)
     }
 
     @IBAction func sendAction(_ sender: Any) {
@@ -116,13 +123,26 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // 전송한 메세지 리스트에 남기는 함수
     func getMessageList(){
-        Database.database().reference().child("chatrooms").child(self.chatRoomUid!).child("comments").observe(DataEventType.value, with: { (dataSnapshot) in
+        databaseRef = Database.database().reference().child("chatrooms").child(self.chatRoomUid!).child("comments")
+        
+        observe = databaseRef!.observe(DataEventType.value, with: { (dataSnapshot) in
             self.comments.removeAll()
             
+            var readUserDic : Dictionary<String, AnyObject> = [:]
+            
             for item in dataSnapshot.children.allObjects as! [DataSnapshot]{
+                let key = item.key as! String
                 let comment = ChatModel.Comment(JSON:  item.value as! [String : Any])
+                comment?.readUsers[self.uid!] = true
+                readUserDic[key] = comment?.toJSON() as! NSDictionary
                 self.comments.append(comment!)
             }
+            let nsDic = readUserDic as NSDictionary
+            
+            dataSnapshot.ref.updateChildValues(nsDic as! [AnyHashable : Any]) { (error, ref) in
+                
+            }
+            
             self.tableView.reloadData()
             
             if self.comments.count > 0 {
@@ -134,32 +154,32 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     @objc private func keyboardWillShow(_ notification: Notification) {
         
         
-      if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-        let keybaordRectangle = keyboardFrame.cgRectValue
-        let keyboardHeight = keybaordRectangle.height
-        print("chatView111111 :: \(chatView.frame.origin.y)")
-        print("keyboardHeight :: \(keyboardHeight)")
-        chatView.frame.origin.y -= keyboardHeight
-        print("chatView2222222 :: \(chatView.frame.origin.y)")
-        self.tableView.reloadData()
-      }
+//      if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+//        let keybaordRectangle = keyboardFrame.cgRectValue
+//        let keyboardHeight = keybaordRectangle.height
+//        print("chatView111111 :: \(chatView.frame.origin.y)")
+//        print("keyboardHeight :: \(keyboardHeight)")
+//        chatView.frame.origin.y -= keyboardHeight
+//        print("chatView2222222 :: \(chatView.frame.origin.y)")
+//        self.tableView.reloadData()
+//      }
     }
       
     @objc private func keyboardWillHide(_ notification: Notification) {
-      if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-        let keybaordRectangle = keyboardFrame.cgRectValue
-        let keyboardHeight = keybaordRectangle.height
-        chatView.frame.origin.y += keyboardHeight
-        
-        print("chatView111111 :: \(chatView.frame.origin.y)")
-        UIView.animate(withDuration: 0) {} completion: { (complete) in
-            if self.comments.count > 0 {
-                self.tableView.scrollToRow(at: IndexPath(item: self.comments.count-1, section: 0), at: .bottom, animated: true)
-            }
-        }
-
-        self.tableView.reloadData()
-      }
+//      if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+//        let keybaordRectangle = keyboardFrame.cgRectValue
+//        let keyboardHeight = keybaordRectangle.height
+//        chatView.frame.origin.y += keyboardHeight
+//
+//        print("chatView111111 :: \(chatView.frame.origin.y)")
+//        UIView.animate(withDuration: 0) {} completion: { (complete) in
+//            if self.comments.count > 0 {
+//                self.tableView.scrollToRow(at: IndexPath(item: self.comments.count-1, section: 0), at: .bottom, animated: true)
+//            }
+//        }
+//
+//        self.tableView.reloadData()
+//      }
     }
     
     @objc func dissmissKeyboard(){
