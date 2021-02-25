@@ -153,20 +153,17 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @objc private func keyboardWillShow(_ notification: Notification) {
         
-        
-//      if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+      if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
 //        let keybaordRectangle = keyboardFrame.cgRectValue
 //        let keyboardHeight = keybaordRectangle.height
-//        print("chatView111111 :: \(chatView.frame.origin.y)")
-//        print("keyboardHeight :: \(keyboardHeight)")
 //        chatView.frame.origin.y -= keyboardHeight
 //        print("chatView2222222 :: \(chatView.frame.origin.y)")
-//        self.tableView.reloadData()
-//      }
+        self.tableView.reloadData()
+      }
     }
       
     @objc private func keyboardWillHide(_ notification: Notification) {
-//      if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+      if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
 //        let keybaordRectangle = keyboardFrame.cgRectValue
 //        let keyboardHeight = keybaordRectangle.height
 //        chatView.frame.origin.y += keyboardHeight
@@ -178,8 +175,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
 //            }
 //        }
 //
-//        self.tableView.reloadData()
-//      }
+        self.tableView.reloadData()
+      }
     }
     
     @objc func dissmissKeyboard(){
