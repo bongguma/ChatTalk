@@ -12,6 +12,7 @@ import Firebase
 class AccountViewController: UIViewController{
 
     @IBOutlet weak var conditionsCommentBtn: UIButton!
+    @IBOutlet weak var logoutBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,5 +43,15 @@ class AccountViewController: UIViewController{
     @IBAction func conditionCommentAction(_ sender: Any) {
         showAlert()
     }
+    
+    @IBAction func logoutAction(_ sender: Any) {
+        do {
+          try Auth.auth().signOut()
+        } catch let signOutError as NSError {
+          print ("Error signing out: %@", signOutError)
+        }
+      self.dismiss(animated: true, completion: nil)
+    }
+    
     
 }
