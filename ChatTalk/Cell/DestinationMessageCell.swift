@@ -42,10 +42,10 @@ class DestinationMessageCell: UITableViewCell {
             let noReadCount = dic.count - readCount
             
             if noReadCount > 0 {
-                readMsgLbl.isHidden = false
-                readMsgLbl.text = String(noReadCount)
+                self.readMsgLbl.isHidden = false
+                self.readMsgLbl.text = String(noReadCount)
             } else {
-                readMsgLbl.isHidden = true
+                self.readMsgLbl.isHidden = true
             }
         }
     }
