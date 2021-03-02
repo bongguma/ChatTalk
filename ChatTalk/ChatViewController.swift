@@ -120,6 +120,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.getMessageList()
         })
     }
+
     
     // 전송한 메세지 리스트에 남기는 함수
     func getMessageList(){
@@ -197,7 +198,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         // 로그인 되어있는 유저와 대화한 상대방의 대화내용을 보여주는 tableCell
         else {
             let destinationMessageCell = tableView.dequeueReusableCell(withIdentifier: "DestinationMessageCell", for: indexPath) as! DestinationMessageCell
-            destinationMessageCell.setUiUpdate(self.comments[indexPath.row], userModel!)
+            destinationMessageCell.setUiUpdate(self.comments[indexPath.row], userModel!, chatRoomUid!)
             return destinationMessageCell
         }
         

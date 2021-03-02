@@ -376,10 +376,16 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2011.11.11 11:11:11" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SmE-UL-01G">
-                                                                            <rect key="frame" x="10" y="22" width="176" height="9"/>
+                                                                            <rect key="frame" x="103" y="22" width="83" height="9"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                                             <color key="textColor" systemColor="systemGray4Color"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6P-bj-wro">
+                                                                            <rect key="frame" x="94" y="19" width="4" height="12"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
@@ -389,6 +395,7 @@
                                                         </tableViewCellContentView>
                                                         <connections>
                                                             <outlet property="messageLbl" destination="UBW-Gn-Vzk" id="19e-B9-Dve"/>
+                                                            <outlet property="readMsgLbl" destination="U6P-bj-wro" id="7KT-pJ-HpK"/>
                                                             <outlet property="timeLbl" destination="SmE-UL-01G" id="PiY-K6-Dd4"/>
                                                         </connections>
                                                     </tableViewCell>
@@ -422,10 +429,16 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2011.11.11 11:11:11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5A-5a-zT8">
-                                                                            <rect key="frame" x="38" y="25" width="147" height="8"/>
+                                                                            <rect key="frame" x="39" y="25" width="82" height="8"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                                             <color key="textColor" systemColor="systemGray4Color"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOS-rH-n74">
+                                                                            <rect key="frame" x="126" y="25" width="5" height="12"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
@@ -437,6 +450,7 @@
                                                             <outlet property="messageLbl" destination="Xee-vQ-MKf" id="rf2-Tg-iZ0"/>
                                                             <outlet property="nameLbl" destination="zDt-Dj-mk3" id="BvJ-uE-XlV"/>
                                                             <outlet property="profileImageView" destination="FpM-Bf-7hJ" id="UMu-ly-keg"/>
+                                                            <outlet property="readMsgLbl" destination="GOS-rH-n74" id="wTC-S1-S8J"/>
                                                             <outlet property="timeLbl" destination="U5A-5a-zT8" id="ULq-Zo-EYd"/>
                                                         </connections>
                                                     </tableViewCell>

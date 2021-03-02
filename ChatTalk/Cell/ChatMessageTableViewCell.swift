@@ -10,7 +10,10 @@ import UIKit
 class ChatMessageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var messageLbl: UILabel!
+    
     @IBOutlet weak var timeLbl: UILabel!
+    
+    @IBOutlet weak var readMsgLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
