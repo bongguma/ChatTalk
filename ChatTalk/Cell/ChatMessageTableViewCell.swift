@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ChatMessageTableViewCell: UITableViewCell {
 
@@ -24,6 +25,24 @@ class ChatMessageTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setReadCount(_ comment : ChatModel.Comment, _ chatRoomUid : String){
+        print("count ChatMessageTableViewCell!!!!!!")
+        let readCount = comment.readUsers.count
+        Database.database().reference().child("chatrooms").child(chatRoomUid).child("users").observeSingleEvent(of: DataEventType.value) { (datasnapshot) in
+            
+            let dic = datasnapshot.value as! [String:Any]
+            
+            let noReadCount = dic.count - readCount
+            
+            if noReadCount > 0 {
+                self.readMsgLbl.isHidden = false
+                self.readMsgLbl.text = String(noReadCount)
+            } else {
+                self.readMsgLbl.isHidden = true
+            }
+        }
     }
     
     public func setUiUpdate(_ comment : ChatModel.Comment){

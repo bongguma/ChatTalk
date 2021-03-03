@@ -134,21 +134,33 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             for item in dataSnapshot.children.allObjects as! [DataSnapshot]{
                 let key = item.key as! String
                 let comment = ChatModel.Comment(JSON:  item.value as! [String : Any])
+                let modifyComment = ChatModel.Comment(JSON:  item.value as! [String : Any])
                 comment?.readUsers[self.uid!] = true
                 readUserDic[key] = comment?.toJSON() as! NSDictionary
                 self.comments.append(comment!)
             }
             let nsDic = readUserDic as NSDictionary
-            
-            dataSnapshot.ref.updateChildValues(nsDic as! [AnyHashable : Any]) { (error, ref) in
+            if ((self.comments.last?.readUsers.keys
+                    .contains(self.uid!)) != nil){
+                dataSnapshot.ref.updateChildValues(nsDic as! [AnyHashable : Any]) { (error, ref) in
+                    
+                    self.tableView.reloadData()
+                    
+                    if self.comments.count > 0 {
+                        self.tableView.scrollToRow(at: IndexPath(item: self.comments.count-1, section: 0), at: .bottom, animated: true)
+                    }
+                }
                 
+            } else {
+                self.tableView.reloadData()
+                
+                if self.comments.count > 0 {
+                    self.tableView.scrollToRow(at: IndexPath(item: self.comments.count-1, section: 0), at: .bottom, animated: true)
+                }
             }
             
-            self.tableView.reloadData()
             
-            if self.comments.count > 0 {
-                self.tableView.scrollToRow(at: IndexPath(item: self.comments.count-1, section: 0), at: .bottom, animated: true)
-            }
+            
         })
     }
     

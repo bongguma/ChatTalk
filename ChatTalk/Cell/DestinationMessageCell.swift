@@ -20,8 +20,6 @@ class DestinationMessageCell: UITableViewCell {
     
     @IBOutlet weak var readMsgLbl: UILabel!
     
-    var chatRoomUid : String?
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,9 +31,11 @@ class DestinationMessageCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setReadCount(_ comment : ChatModel.Comment){
+    // 메세지 갯수만큼 서버에 방 인원 수를 물어보는 코드
+    func setReadCount(_ comment : ChatModel.Comment, _ chatRoomUid : String){
+        print("count DestinationMessageCell!!!!!!")
         let readCount = comment.readUsers.count
-        Database.database().reference().child("chatrooms").child(chatRoomUid!).child("users").observeSingleEvent(of: DataEventType.value) { (datasnapshot) in
+        Database.database().reference().child("chatrooms").child(chatRoomUid).child("users").observeSingleEvent(of: DataEventType.value) { (datasnapshot) in
             
             let dic = datasnapshot.value as! [String:Any]
             
@@ -51,14 +51,14 @@ class DestinationMessageCell: UITableViewCell {
     }
     
     public func setUiUpdate(_ comment : ChatModel.Comment, _ userModel: UserModel, _ chatRoomUid : String){
-        print("destinationMessageUIUpdate!!!!!!!!")
+
         nameLbl.text = userModel.name
         messageLbl.text = comment.message
         timeLbl.text = comment.time?.toDayTime
         
         let url = URL(string: userModel.profileImage!)
         
-        self.chatRoomUid = chatRoomUid
+        setReadCount(comment, chatRoomUid)
 //        URLSession.shared.dataTask(with: url!) { (data, response, error) in
 //            DispatchQueue.main.sync {
 //                self.profileImageView.image = UIImage(data: data!)
