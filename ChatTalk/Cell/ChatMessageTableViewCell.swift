@@ -45,10 +45,12 @@ class ChatMessageTableViewCell: UITableViewCell {
         }
     }
     
-    public func setUiUpdate(_ comment : ChatModel.Comment){
+    public func setUiUpdate(_ comment : ChatModel.Comment,  _ chatRoomUid : String){
         if nil != comment {
             messageLbl.text = comment.message!
             timeLbl.text = comment.time?.toDayTime
+            
+            setReadCount(comment, chatRoomUid)
         }
         
     }

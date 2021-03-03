@@ -204,7 +204,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         // 로그인 되어있는 유저가 입력한 대화내용을 보여주는 tableCell
         if self.comments[indexPath.row].uid == uid{
             let chatMessageTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ChatMessageTableViewCell", for: indexPath) as! ChatMessageTableViewCell
-            chatMessageTableViewCell.setUiUpdate(self.comments[indexPath.row])
+            chatMessageTableViewCell.setUiUpdate(self.comments[indexPath.row], chatRoomUid!)
             return chatMessageTableViewCell
         }
         // 로그인 되어있는 유저와 대화한 상대방의 대화내용을 보여주는 tableCell
