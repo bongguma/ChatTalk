@@ -38,6 +38,7 @@
 		0F5DA3A725CAD51500024E7B /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5DA3A625CAD51500024E7B /* ChatModel.swift */; };
 		0F745D3225E539E20054C7F2 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F745D3125E539E20054C7F2 /* AccountViewController.swift */; };
 		0F745D3925E697E90054C7F2 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F745D3825E697E90054C7F2 /* UIView.swift */; };
+		0F96FFAB25F129100094A7D3 /* SelectFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F96FFAA25F129100094A7D3 /* SelectFriendViewController.swift */; };
 		0FBB9F3225D183CB00AEC739 /* ChatMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBB9F3125D183CB00AEC739 /* ChatMessageTableViewCell.swift */; };
 		0FBB9F3625D2D63C00AEC739 /* messageGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FBB9F3425D2D63C00AEC739 /* messageGray.png */; };
 		0FBB9F3725D2D63C00AEC739 /* messageBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FBB9F3525D2D63C00AEC739 /* messageBlue.png */; };
@@ -79,6 +80,8 @@
 		0F5DA3A625CAD51500024E7B /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		0F745D3125E539E20054C7F2 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		0F745D3825E697E90054C7F2 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		0F96FFA825F120810094A7D3 /* BEMCheckBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BEMCheckBox.h; sourceTree = "<group>"; };
+		0F96FFAA25F129100094A7D3 /* SelectFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriendViewController.swift; sourceTree = "<group>"; };
 		0FBB9F3125D183CB00AEC739 /* ChatMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageTableViewCell.swift; sourceTree = "<group>"; };
 		0FBB9F3425D2D63C00AEC739 /* messageGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageGray.png; sourceTree = "<group>"; };
 		0FBB9F3525D2D63C00AEC739 /* messageBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageBlue.png; sourceTree = "<group>"; };
@@ -108,6 +111,7 @@
 				0F5DA37D25BF145D00024E7B /* PeopleViewController.swift */,
 				0F5B289525DFFBC900B7AC47 /* ChatRoomViewController.swift */,
 				0F745D3125E539E20054C7F2 /* AccountViewController.swift */,
+				0F96FFAA25F129100094A7D3 /* SelectFriendViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -162,6 +166,7 @@
 				0F5DA21425B718DA00024E7B /* LoginViewController.swift */,
 				0F5DA24925B87B7600024E7B /* JoinViewController.swift */,
 				0F5DA39F25CAD29700024E7B /* ChatViewController.swift */,
+				0F96FFA825F120810094A7D3 /* BEMCheckBox.h */,
 			);
 			path = ChatTalk;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 				0F5B28A425E2966E00B7AC47 /* UILayoutPriority.swift in Sources */,
 				0F745D3925E697E90054C7F2 /* UIView.swift in Sources */,
 				0F5DA12025B5CE3E00024E7B /* UILayoutPriority.swift in Sources */,
+				0F96FFAB25F129100094A7D3 /* SelectFriendViewController.swift in Sources */,
 				0F5DA21925B725CB00024E7B /* UIButton.swift in Sources */,
 				0F5DA24A25B87B7600024E7B /* JoinViewController.swift in Sources */,
 				0FBB9F3225D183CB00AEC739 /* ChatMessageTableViewCell.swift in Sources */,
@@ -529,6 +535,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bongguma.ChatTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ChatTalk/BEMCheckBox.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -549,6 +556,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bongguma.ChatTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ChatTalk/BEMCheckBox.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
