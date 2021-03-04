@@ -1,4 +1,5 @@
 PODS:
+  - BEMCheckBox (1.4.1)
   - Firebase/Analytics (7.4.0):
     - Firebase/Core
   - Firebase/Auth (7.4.0):
@@ -113,6 +114,7 @@ PODS:
   - PromisesObjC (1.2.12)
 
 DEPENDENCIES:
+  - BEMCheckBox
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Database
@@ -123,6 +125,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - BEMCheckBox
     - Firebase
     - FirebaseABTesting
     - FirebaseAnalytics
@@ -145,6 +148,7 @@ SPEC REPOS:
     - PromisesObjC
 
 SPEC CHECKSUMS:
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   Firebase: 09fb40287b6dfc8ee65f726fa0b788719d3f2a07
   FirebaseABTesting: 9d9c21ed27a1ac7213fe377cde655434da9c16d2
   FirebaseAnalytics: adb3c8f02f83d00661cdaac6dbb4d54e9720d1b6
@@ -166,6 +170,6 @@ SPEC CHECKSUMS:
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: 95eb5bf9d4c43c5fcbbd465e23b37c9afd3baba2
+PODFILE CHECKSUM: 44b691ccd7a41202abd052f34ce7b5305611521a
 
 COCOAPODS: 1.10.0
