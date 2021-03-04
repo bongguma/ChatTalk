@@ -39,6 +39,7 @@
 		0F745D3225E539E20054C7F2 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F745D3125E539E20054C7F2 /* AccountViewController.swift */; };
 		0F745D3925E697E90054C7F2 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F745D3825E697E90054C7F2 /* UIView.swift */; };
 		0F96FFAB25F129100094A7D3 /* SelectFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F96FFAA25F129100094A7D3 /* SelectFriendViewController.swift */; };
+		0F96FFAE25F12DE70094A7D3 /* SelectFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F96FFAD25F12DE70094A7D3 /* SelectFriendTableViewCell.swift */; };
 		0FBB9F3225D183CB00AEC739 /* ChatMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBB9F3125D183CB00AEC739 /* ChatMessageTableViewCell.swift */; };
 		0FBB9F3625D2D63C00AEC739 /* messageGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FBB9F3425D2D63C00AEC739 /* messageGray.png */; };
 		0FBB9F3725D2D63C00AEC739 /* messageBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FBB9F3525D2D63C00AEC739 /* messageBlue.png */; };
@@ -82,6 +83,7 @@
 		0F745D3825E697E90054C7F2 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		0F96FFA825F120810094A7D3 /* BEMCheckBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BEMCheckBox.h; sourceTree = "<group>"; };
 		0F96FFAA25F129100094A7D3 /* SelectFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriendViewController.swift; sourceTree = "<group>"; };
+		0F96FFAD25F12DE70094A7D3 /* SelectFriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriendTableViewCell.swift; sourceTree = "<group>"; };
 		0FBB9F3125D183CB00AEC739 /* ChatMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageTableViewCell.swift; sourceTree = "<group>"; };
 		0FBB9F3425D2D63C00AEC739 /* messageGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageGray.png; sourceTree = "<group>"; };
 		0FBB9F3525D2D63C00AEC739 /* messageBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messageBlue.png; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				0FBB9F3125D183CB00AEC739 /* ChatMessageTableViewCell.swift */,
 				0F5B289025D93EA800B7AC47 /* DestinationMessageCell.swift */,
 				0F5B28A725E29DA200B7AC47 /* ChatRowCell.swift */,
+				0F96FFAD25F12DE70094A7D3 /* SelectFriendTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				0F745D3225E539E20054C7F2 /* AccountViewController.swift in Sources */,
 				0F5DA0D625B5C1DC00024E7B /* SceneDelegate.swift in Sources */,
 				0F5DA21525B718DA00024E7B /* LoginViewController.swift in Sources */,
+				0F96FFAE25F12DE70094A7D3 /* SelectFriendTableViewCell.swift in Sources */,
 				0F5B28A425E2966E00B7AC47 /* UILayoutPriority.swift in Sources */,
 				0F745D3925E697E90054C7F2 /* UIView.swift in Sources */,
 				0F5DA12025B5CE3E00024E7B /* UILayoutPriority.swift in Sources */,
