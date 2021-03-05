@@ -8,9 +8,13 @@
 
 import UIKit
 import Firebase
+import BEMCheckBox
 
 class SelectFriendTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var checkBox: BEMCheckBox!
+    @IBOutlet weak var peopleImageIv: UIImageView!
+    @IBOutlet weak var peopleNameLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +24,9 @@ class SelectFriendTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    public func setUiUpdate(_ userModel : UserModel){
+        peopleNameLbl.text = userModel.name
     }
 }

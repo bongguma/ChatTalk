@@ -357,7 +357,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7e3-ZZ-And">
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7e3-ZZ-And" customClass="BEMCheckBox">
                                                     <rect key="frame" x="16" y="9" width="52" height="52"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -375,6 +375,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkBox" destination="7e3-ZZ-And" id="tqa-bo-HAe"/>
+                                            <outlet property="peopleImageIv" destination="Tyk-wa-lbr" id="OhT-hj-KxW"/>
+                                            <outlet property="peopleNameLbl" destination="hsl-iC-rih" id="iJ8-nl-NKu"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -388,6 +393,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="t7I-g4-Tor"/>
                     <size key="freeformSize" width="320" height="600"/>
+                    <connections>
+                        <outlet property="tableView" destination="2NN-3x-YYS" id="J8y-Ld-Zij"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jAe-ru-YFy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -814,6 +822,9 @@
     <designables>
         <designable name="6lV-gd-knf">
             <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="7e3-ZZ-And">
+            <size key="intrinsicContentSize" width="52" height="52"/>
         </designable>
     </designables>
     <resources>
