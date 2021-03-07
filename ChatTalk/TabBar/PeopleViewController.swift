@@ -99,5 +99,14 @@ class PeopleViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         self.navigationController?.pushViewController(nextControllerView!, animated: true)
     }
+    
+    @IBAction func showSelectFriendAction(_ sender: Any) {
+//        self.performSegue(withIdentifier: "SelectFrindSegue", sender: nil)
+        
+        
+        let nextControllerView = self.storyboard?.instantiateViewController(withIdentifier: "SelectFriendViewController") as? SelectFriendViewController
+        self.navigationController?.pushViewController(nextControllerView!, animated: true)
+    }
+    
 }
  

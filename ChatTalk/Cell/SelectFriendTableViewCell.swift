@@ -15,6 +15,7 @@ class SelectFriendTableViewCell: UITableViewCell {
     @IBOutlet weak var checkBox: BEMCheckBox!
     @IBOutlet weak var peopleImageIv: UIImageView!
     @IBOutlet weak var peopleNameLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
