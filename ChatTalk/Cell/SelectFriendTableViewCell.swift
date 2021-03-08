@@ -10,7 +10,13 @@ import UIKit
 import Firebase
 import BEMCheckBox
 
-class SelectFriendTableViewCell: UITableViewCell, BEMCheckBoxDelegate {
+protocol SelectFriendProtocol {
+    //프로토콜 정의
+    func selectFriendCheckUsers() -> [String:Bool]
+    
+}
+
+class SelectFriendTableViewCell: UITableViewCell, BEMCheckBoxDelegate,SelectFriendProtocol {
     
     var users = Dictionary<String, Bool>()
     
@@ -34,7 +40,6 @@ class SelectFriendTableViewCell: UITableViewCell, BEMCheckBoxDelegate {
     public func setUiUpdate(_ userModel : UserModel, _ row : Int, _ users:[String:Bool]){
         
         self.users = users
-        
         self.userModel = userModel
         
         peopleNameLbl.text = userModel.name
@@ -50,6 +55,10 @@ class SelectFriendTableViewCell: UITableViewCell, BEMCheckBoxDelegate {
             } else {
                 users.removeValue(forKey: userModel.uid!)
             }
-        
+    }
+    
+    func selectFriendCheckUsers() -> [String : Bool] {
+        print("users :: \(users)")
+        return users
     }
 }

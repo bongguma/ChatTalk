@@ -848,6 +848,9 @@
         <designable name="6lV-gd-knf">
             <size key="intrinsicContentSize" width="30" height="34"/>
         </designable>
+        <designable name="7e3-ZZ-And">
+            <size key="intrinsicContentSize" width="28" height="29"/>
+        </designable>
     </designables>
     <resources>
         <image name="account.png" width="32" height="32"/>

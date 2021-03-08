@@ -18,6 +18,8 @@ class SelectFriendViewController: UIViewController, UITableViewDelegate, UITable
     
     var myUid : String?
     
+    var delegate : SelectFriendProtocol?
+    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var makeChatRoomBtn: UIButton!
@@ -62,6 +64,8 @@ class SelectFriendViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBAction func makeChatRoomAction(_ sender: Any) {
         var myUid = Auth.auth().currentUser?.uid
+        
+        users = (delegate?.selectFriendCheckUsers())! 
         
         users[myUid!] = true
         
