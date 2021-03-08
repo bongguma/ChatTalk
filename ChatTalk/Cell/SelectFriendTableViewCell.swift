@@ -10,7 +10,11 @@ import UIKit
 import Firebase
 import BEMCheckBox
 
-class SelectFriendTableViewCell: UITableViewCell {
+class SelectFriendTableViewCell: UITableViewCell, BEMCheckBoxDelegate {
+    
+    var users = Dictionary<String, Bool>()
+    
+    var userModel = UserModel()
     
     @IBOutlet weak var checkBox: BEMCheckBox!
     @IBOutlet weak var peopleImageIv: UIImageView!
@@ -27,7 +31,25 @@ class SelectFriendTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    public func setUiUpdate(_ userModel : UserModel){
+    public func setUiUpdate(_ userModel : UserModel, _ row : Int, _ users:[String:Bool]){
+        
+        self.users = users
+        
+        self.userModel = userModel
+        
         peopleNameLbl.text = userModel.name
+        
+        checkBox.delegate = self
+        checkBox.tag = row
+        
+    }
+    
+    @IBAction func didTapAction(_ sender: Any) {
+            if checkBox.on {
+                users[userModel.uid!] = true
+            } else {
+                users.removeValue(forKey: userModel.uid!)
+            }
+        
     }
 }

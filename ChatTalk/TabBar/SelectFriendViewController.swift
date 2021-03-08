@@ -8,14 +8,20 @@
 
 import UIKit
 import Firebase
+import BEMCheckBox
 
-class SelectFriendViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SelectFriendViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, BEMCheckBoxDelegate {
+    
+    var users = Dictionary<String, Bool>()
     
     var peopleInfoArr:[UserModel] = []
     
     var myUid : String?
     
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var makeChatRoomBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,8 +55,18 @@ class SelectFriendViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let selectFriendCell = tableView.dequeueReusableCell(withIdentifier: "SelectFriendTableViewCell", for: indexPath) as! SelectFriendTableViewCell
         
-        selectFriendCell.setUiUpdate(peopleInfoArr[indexPath.row])
+        selectFriendCell.setUiUpdate(peopleInfoArr[indexPath.row], indexPath.row, users)
         
         return selectFriendCell
+    }
+    
+    @IBAction func makeChatRoomAction(_ sender: Any) {
+        var myUid = Auth.auth().currentUser?.uid
+        
+        users[myUid!] = true
+        
+        let nsDic = users as! NSDictionary
+        
+        Database.database().reference().child("chatrooms").childByAutoId().child("users").setValue(nsDic)
     }
 }
