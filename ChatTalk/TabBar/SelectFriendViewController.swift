@@ -10,15 +10,15 @@ import UIKit
 import Firebase
 import BEMCheckBox
 
-class SelectFriendViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, BEMCheckBoxDelegate {
+
+// 받는 쪽에서 protocol를 상속 받아 메소드를 활용할 수 있도록 한다.
+class SelectFriendViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, BEMCheckBoxDelegate, SelectFriendProtocol {
     
     var users = Dictionary<String, Bool>()
     
     var peopleInfoArr:[UserModel] = []
     
     var myUid : String?
-    
-    var delegate : SelectFriendProtocol?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -28,7 +28,6 @@ class SelectFriendViewController: UIViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
         
         self.title = "개인정보 수정"
-        
         
         Database.database().reference().child("users").observe(DataEventType.value) { (snapshot) in
 
@@ -66,12 +65,16 @@ class SelectFriendViewController: UIViewController, UITableViewDelegate, UITable
     @IBAction func makeChatRoomAction(_ sender: Any) {
         var myUid = Auth.auth().currentUser?.uid
         
-        print("(delegate?.selectFriendCheckUsers())! :: \(delegate!.selectFriendCheckUsers()) ")
-        users = (delegate!.selectFriendCheckUsers())
         users[myUid!] = true
         
         let nsDic = users as! NSDictionary
         
         Database.database().reference().child("chatrooms").childByAutoId().child("users").setValue(nsDic)
     }
+    
+    // 데이터 전달 받기
+    func selectFriendCheckUsers(users: [String : Bool]) {
+        self.users = users
+    }
+    
 }
