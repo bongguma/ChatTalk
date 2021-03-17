@@ -29,6 +29,7 @@ class SelectFriendViewController: UIViewController, UITableViewDelegate, UITable
         
         self.title = "개인정보 수정"
         
+        
         Database.database().reference().child("users").observe(DataEventType.value) { (snapshot) in
 
             // 현재 로그인 된 유저 uid 저장
@@ -65,8 +66,8 @@ class SelectFriendViewController: UIViewController, UITableViewDelegate, UITable
     @IBAction func makeChatRoomAction(_ sender: Any) {
         var myUid = Auth.auth().currentUser?.uid
         
-        users = (delegate?.selectFriendCheckUsers())! 
-        
+        print("(delegate?.selectFriendCheckUsers())! :: \(delegate!.selectFriendCheckUsers()) ")
+        users = (delegate!.selectFriendCheckUsers())
         users[myUid!] = true
         
         let nsDic = users as! NSDictionary
