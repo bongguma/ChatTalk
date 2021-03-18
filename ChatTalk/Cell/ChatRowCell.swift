@@ -40,6 +40,10 @@ class ChatRowCell: UITableViewCell {
             let userModel = UserModel()
             userModel.setValuesForKeys(datasnapshot.value as! [String:AnyObject])
             
+            if chatRoom.comments.keys.count == 0 {
+                return 
+            }
+            
             self.titleLbl.text = userModel.name!
             
             let lastMesageKey = chatRoom.comments.keys.sorted(){$0>$1}

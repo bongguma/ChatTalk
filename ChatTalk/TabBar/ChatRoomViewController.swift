@@ -62,9 +62,19 @@ class ChatRoomViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.deselectRow(at: indexPath, animated: true)
         
         let destinationUid = self.destinationUsers[indexPath.row]
-        let chatViewController = self.storyboard?.instantiateViewController(identifier: "ChatViewController") as! ChatViewController
-        chatViewController.destinationUid = destinationUid
+        if self.destinationUsers[indexPath.row].count > 2 {
+            
+            let groupChatViewController = self.storyboard?.instantiateViewController(identifier: "GroupChatViewController") as! GroupChatViewController
+            
+            self.navigationController?.pushViewController(groupChatViewController, animated: true)
         
-        self.navigationController?.pushViewController(chatViewController, animated: true)
+        } else {
+            
+            let chatViewController = self.storyboard?.instantiateViewController(identifier: "ChatViewController") as! ChatViewController
+            chatViewController.destinationUid = destinationUid
+            
+            self.navigationController?.pushViewController(chatViewController, animated: true)
+        }
+        
     }
 }

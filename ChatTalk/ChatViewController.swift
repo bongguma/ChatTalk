@@ -140,6 +140,12 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.comments.append(comment!)
             }
             let nsDic = readUserDic as NSDictionary
+            
+            // 채팅방을 바로 만든 경우에 메세지가 없을 경우 에러가 발생되는 경우
+            if self.comments.last?.readUsers.keys == nil {
+                return ;
+            }
+            
             if ((self.comments.last?.readUsers.keys
                     .contains(self.uid!)) != nil){
                 dataSnapshot.ref.updateChildValues(nsDic as! [AnyHashable : Any]) { (error, ref) in

@@ -595,6 +595,22 @@
             </objects>
             <point key="canvasLocation" x="2422" y="1284"/>
         </scene>
+        <!--Group Chat View Controller-->
+        <scene sceneID="ujG-jM-nyb">
+            <objects>
+                <viewController storyboardIdentifier="GroupChatViewController" id="9D7-dk-Wun" customClass="GroupChatViewController" customModule="ChatTalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BIr-n9-QgB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="coG-c2-Wn7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <size key="freeformSize" width="320" height="600"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frg-NU-ggL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3107" y="1283"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="fAg-zi-b46">
             <objects>
